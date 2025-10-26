@@ -1,0 +1,78 @@
+/**
+ * Standard Button Styles
+ *
+ * Centralized button design using phtalo green gradient
+ * Used across all pages for consistent button styling
+ */
+
+/* Standard button - for <button> elements */
+.standardButton {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, var(--primary-600), var(--primary-700));
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.standardButton:hover {
+  background: linear-gradient(to right, var(--primary-700), var(--primary-800));
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .standardButton {
+  background: linear-gradient(to right, var(--primary-500), var(--primary-600));
+}
+
+[data-theme='dark'] .standardButton:hover {
+  background: linear-gradient(to right, var(--primary-400), var(--primary-500));
+}
+
+/* Standard button link - for <a> elements */
+.standardButtonLink {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, var(--primary-600), var(--primary-700));
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.standardButtonLink:hover {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, var(--primary-700), var(--primary-800));
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .standardButtonLink {
+  background: linear-gradient(to right, var(--primary-500), var(--primary-600));
+}
+
+[data-theme='dark'] .standardButtonLink:hover {
+  background: linear-gradient(to right, var(--primary-400), var(--primary-500));
+}
+
+/* Button icon styling */
+.buttonIcon {
+  margin-left: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}

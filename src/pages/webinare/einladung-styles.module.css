@@ -1,0 +1,288 @@
+/* KI Basics Webinar Invitation Page Styles */
+
+/* Container and layout */
+.container {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Override Docusaurus default column padding and margins */
+.container :global(.col) {
+  padding: 0 !important;
+}
+
+:global(.col) {
+  padding: 0 !important;
+}
+
+.container :global(.margin-vert--lg) {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+:global(.margin-vert--lg) {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.backgroundGradient {
+  /* No custom background - uses default Docusaurus page background */
+  display: none;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  padding: 8rem 1.5rem 4rem 1.5rem;
+  text-align: center;
+}
+
+.heroContainer {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .heroTitle {
+  color: white;
+}
+
+.heroDescription {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.25rem;
+  color: var(--ifm-font-color-base);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+[data-theme='dark'] .heroDescription {
+  color: rgb(209, 213, 219);
+}
+
+.copyButton {
+  composes: standardButton from global;
+}
+
+/* Invitation Section */
+.invitationSection {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+
+.invitationContainer {
+  max-width: 48rem;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .invitationContainer {
+  background: rgb(31, 41, 55);
+}
+
+/* Remove default MDX/Docusaurus margins */
+.invitationContainer > div {
+  margin: 0;
+  padding: 0;
+}
+
+.invitationContainer h2:first-child,
+.invitationContainer > div > h2:first-child {
+  margin-top: 0;
+}
+
+.invitationTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: rgb(17, 24, 39);
+  text-align: center;
+}
+
+[data-theme='dark'] .invitationTitle {
+  color: white;
+}
+
+.greeting {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  color: rgb(17, 24, 39);
+  margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .greeting {
+  color: white;
+}
+
+.introduction {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  color: rgb(75, 85, 99);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+[data-theme='dark'] .introduction {
+  color: rgb(209, 213, 219);
+}
+
+.sectionTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin: 2rem 0 1rem 0;
+}
+
+[data-theme='dark'] .sectionTitle {
+  color: var(--ifm-color-primary-lightest);
+}
+
+.sectionText {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1rem;
+  color: rgb(75, 85, 99);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+[data-theme='dark'] .sectionText {
+  color: rgb(209, 213, 219);
+}
+
+.detailsList, .learningList, .targetList, .benefitsList {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1rem;
+  color: rgb(75, 85, 99);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+[data-theme='dark'] .detailsList, 
+[data-theme='dark'] .learningList, 
+[data-theme='dark'] .targetList, 
+[data-theme='dark'] .benefitsList {
+  color: rgb(209, 213, 219);
+}
+
+.detailsList li, .learningList li, .targetList li, .benefitsList li {
+  margin-bottom: 0.5rem;
+}
+
+.closing {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  color: rgb(75, 85, 99);
+  line-height: 1.75;
+  margin: 2rem 0 1.5rem 0;
+}
+
+[data-theme='dark'] .closing {
+  color: rgb(209, 213, 219);
+}
+
+.signature {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1rem;
+  color: rgb(17, 24, 39);
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+[data-theme='dark'] .signature {
+  color: white;
+}
+
+/* Contact Section */
+.contactSection {
+  position: relative;
+  padding: 4rem 1.5rem;
+}
+
+.contactContainer {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: rgb(17, 24, 39);
+}
+
+[data-theme='dark'] .contactTitle {
+  color: white;
+}
+
+.contactDescription {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  color: rgb(75, 85, 99);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+[data-theme='dark'] .contactDescription {
+  color: rgb(209, 213, 219);
+}
+
+.contactButton {
+  composes: standardButtonLink from global;
+}
+
+.buttonIcon {
+  composes: buttonIcon from global;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .heroSection {
+    padding: 8rem 2rem 4rem 2rem;
+  }
+  
+  .invitationSection {
+    padding: 2rem 2rem;
+  }
+  
+  .contactSection {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.5rem;
+  }
+  
+  .contactTitle {
+    font-size: 2.25rem;
+  }
+  
+  .invitationTitle {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 3.75rem;
+  }
+}

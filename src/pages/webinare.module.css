@@ -1,0 +1,292 @@
+/* Webinare page styles - converted from Tailwind */
+
+/* Container and layout */
+.container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.backgroundGradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--secondary-50);
+}
+
+[data-theme='dark'] .backgroundGradient {
+  background: var(--dark-background);
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  padding: 8rem 1.5rem 4rem 1.5rem;
+}
+
+.heroContainer {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .heroTitle {
+  color: white;
+}
+
+.heroDescription {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.25rem;
+  color: var(--ifm-font-color-base);
+  line-height: 1.75;
+}
+
+[data-theme='dark'] .heroDescription {
+  color: rgb(209, 213, 219);
+}
+
+/* Webinars Section */
+.webinarsSection {
+  position: relative;
+  padding: 4rem 1.5rem;
+}
+
+.webinarsContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.webinarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.webinarItem:last-child {
+  margin-bottom: 0;
+}
+
+.webinarItemReverse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.webinarItemReverse:last-child {
+  margin-bottom: 0;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.iconWrapper {
+  padding: 2rem;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .iconWrapper {
+  background: var(--dark-background);
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.iconOrange {
+  color: var(--ifm-color-primary);
+}
+
+
+.contentContainer {
+  max-width: 36rem;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .contentContainer {
+  background: var(--dark-background);
+}
+
+.webinarTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: rgb(17, 24, 39);
+}
+
+[data-theme='dark'] .webinarTitle {
+  color: white;
+}
+
+.badgeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  background: var(--color-secondary-lighter);
+}
+
+[data-theme='dark'] .badge {
+  color: var(--ifm-color-primary-lightest);
+  background: var(--color-secondary-dark);
+}
+
+.webinarDescription {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  color: rgb(75, 85, 99);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+[data-theme='dark'] .webinarDescription {
+  color: rgb(209, 213, 219);
+}
+
+.button {
+  composes: standardButtonLink from global;
+}
+
+.buttonIcon {
+  composes: buttonIcon from global;
+}
+
+/* Contact Section */
+.contactSection {
+  position: relative;
+  padding: 4rem 1.5rem;
+}
+
+.contactContainer {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: rgb(17, 24, 39);
+}
+
+[data-theme='dark'] .contactTitle {
+  color: white;
+}
+
+.contactDescription {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  color: rgb(75, 85, 99);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+[data-theme='dark'] .contactDescription {
+  color: rgb(209, 213, 219);
+}
+
+.contactButton {
+  composes: standardButtonLink from global;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .heroSection {
+    padding: 8rem 2rem 4rem 2rem;
+  }
+  
+  .webinarsSection {
+    padding: 4rem 2rem;
+  }
+  
+  .contactSection {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.5rem;
+  }
+  
+  .webinarTitle {
+    font-size: 2.25rem;
+  }
+  
+  .contactTitle {
+    font-size: 2.25rem;
+  }
+  
+  .icon {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 3.75rem;
+  }
+  
+  .webinarItem {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  
+  .webinarItemReverse {
+    flex-direction: row-reverse;
+    gap: 4rem;
+  }
+  
+  .iconContainer {
+    width: 33.333333%;
+  }
+  
+  .contentContainer {
+    width: 66.666667%;
+    margin: 0;
+  }
+  
+  .webinarTitle {
+    font-size: 2.25rem;
+  }
+}
