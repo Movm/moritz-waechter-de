@@ -1,0 +1,250 @@
+import type {ReactNode} from 'react';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+// TEMPORARILY COMMENTED OUT TO TEST FLICKERING
+// import { motion, useInView } from 'framer-motion';
+// import { useRef } from 'react';
+import styles from './index.module.css';
+
+// Google Fonts (imported via CSS)
+
+export default function Home(): ReactNode {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <Layout
+      title={siteConfig.title}
+      description="Künstliche Intelligenz für das Gute">
+      <div className={styles.container}>
+        {/* Full-Page Gradient Background - Sunrise to Sunset */}
+        <div className={styles.backgroundWrapper}>
+          <div className={styles.gradientBackground} />
+        </div>
+        
+        {/* Page Content Container */}
+        <div className={styles.contentWrapper}>
+          {/* Hero Section */}
+          <div className={styles.heroSection}>
+            {/* Optional animated gradient blob - kept for visual interest */}
+            <div className={styles.animatedBlob}>
+              <div className={styles.blob} />
+            </div>
+            
+            <div className={styles.heroContent}>
+            {/* Main Heading */}
+            <h1 className={styles.mainHeading}>
+              <span className={styles.headingBlack}>KI. </span>
+              <span className={styles.headingBlack}>Aber </span>
+              <span className={styles.headingGradient}>Sinnvoll.</span>
+            </h1>
+            
+            {/* Subtitle */}
+            <p className={styles.subtitle}>
+              Künstliche Intelligenz für das Gute.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className={styles.ctaContainer}>
+              <Link 
+                to="/projekte"
+                className={styles.ctaPrimary}
+              >
+                Projekte
+                <svg className={styles.ctaIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </Link>
+              
+              <Link 
+                to="/webinare"
+                className={styles.ctaSecondary}
+              >
+                Webinare
+                <svg className={styles.ctaIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </Link>
+
+              <Link 
+                to="/contact"
+                className={styles.ctaSecondary}
+              >
+                Kontakt
+                <svg className={styles.ctaIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+          </div>
+
+          {/* About Section - Beautiful Two-Column with Animations */}
+          {/* <AboutSection /> - COMMENTED OUT TO TEST FLICKERING */}
+        </div>
+      </div>
+    </Layout>
+  );
+}
+
+/* TEMPORARILY COMMENTED OUT TO TEST FLICKERING ISSUE
+
+About Section Component with Framer Motion animations
+function AboutSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { 
+    once: true, 
+    amount: 0.2 // Trigger when 20% of the section is visible
+  });
+
+  // Animation variants with staggered delays
+  const decorationVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1], // Smooth spring easing
+        delay: 0 // No delay for decorations
+      }
+    }
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1],
+        delay: 0.4 // 400ms delay
+      }
+    }
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1],
+        delay: 0.6 // 600ms delay
+      }
+    }
+  };
+
+  return (
+    <section ref={ref} className={styles.aboutSection}>
+      <div className={styles.aboutContainer}>
+        <div className={styles.aboutGrid}>
+          
+          Left Side - Image placeholder with Decorative Elements
+          <div className={styles.imageContainer}>
+            Decorative Background Elements
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={decorationVariants}
+              className={styles.decorativeElement1}
+            />
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={decorationVariants}
+              className={styles.decorativeElement2}
+            />
+            
+            Floating Circles Animation
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={decorationVariants}
+              className={styles.floatingCircle1}
+              style={{
+                animation: isInView ? "float 6s ease-in-out infinite" : "none"
+              }}
+            />
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={decorationVariants}
+              className={styles.floatingCircle2}
+              style={{
+                animation: isInView ? "float 8s ease-in-out infinite 1s" : "none"
+              }}
+            />
+            
+            Placeholder for image
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={decorationVariants}
+              className={styles.imagePlaceholder}
+            >
+              <div className={styles.placeholderContent}>
+                <div className={styles.placeholderIcon}>
+                  <svg className={styles.placeholderIconSvg} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <p className={styles.placeholderText}>Über uns Bild</p>
+              </div>
+              
+              Subtle gradient overlay
+              <div className={styles.gradientOverlay} />
+            </motion.div>
+          </div>
+
+          Right Side - Content
+          <div className={styles.aboutContent}>
+            <motion.h2
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={headerVariants}
+              className={styles.aboutHeading}
+            >
+              Über uns
+            </motion.h2>
+            
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={textVariants}
+              className={styles.aboutTextContainer}
+            >
+              <p className={styles.aboutText}>
+                Wir entwickeln durchdachte KI-Lösungen, die echten Mehrwert schaffen. Mit Fokus auf Ethik, Transparenz und nachhaltigen Impact.
+              </p>
+              
+              <p className={styles.aboutText}>
+                Unser Ziel ist es, Künstliche Intelligenz sinnvoll und verantwortungsbewusst einzusetzen - für eine bessere Zukunft.
+              </p>
+              
+              <p className={styles.aboutText}>
+                Entdecken Sie unsere Projekte und erfahren Sie, wie wir KI für das Gute nutzen.
+              </p>
+            </motion.div>
+            
+            Optional: Add a subtle divider or accent
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={textVariants}
+              className={styles.dividerContainer}
+            >
+              <div className={styles.divider1} />
+              <div className={styles.divider2} />
+              <div className={styles.divider3} />
+            </motion.div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  );
+}
+
+END OF COMMENTED OUT SECTION */
