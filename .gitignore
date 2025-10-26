@@ -22,3 +22,9 @@ yarn-error.log*
 # Static directory - exclude temporary files but keep content
 static/.DS_Store
 static/**/.DS_Store
+
+# Development and internal files
+CLAUDE.md
+DESIGN_GUIDELINES.md
+STYLE_GUIDE.md
+*.backup
