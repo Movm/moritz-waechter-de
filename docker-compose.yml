@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  moritz-waechter-de:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: moritz-waechter-de
+    restart: unless-stopped
+    networks:
+      - traefik
+    labels:
+      # Enable Traefik for this container
+      - "traefik.enable=true"
+
+      # Define the Traefik network to use
+      - "traefik.docker.network=traefik"
+
+      # HTTP Router - Redirect to HTTPS
+      - "traefik.http.routers.moritz-waechter-http.rule=Host(`moritz-waechter.de`) || Host(`www.moritz-waechter.de`)"
+      - "traefik.http.routers.moritz-waechter-http.entrypoints=web"
+      - "traefik.http.routers.moritz-waechter-http.middlewares=redirect-to-https"
+
+      # HTTPS Router - Main router for both domains
+      - "traefik.http.routers.moritz-waechter.rule=Host(`moritz-waechter.de`) || Host(`www.moritz-waechter.de`)"
+      - "traefik.http.routers.moritz-waechter.entrypoints=websecure"
+      - "traefik.http.routers.moritz-waechter.tls=true"
+      - "traefik.http.routers.moritz-waechter.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.moritz-waechter.middlewares=www-redirect"
+
+      # Service configuration
+      - "traefik.http.services.moritz-waechter.loadbalancer.server.port=80"
+
+      # Middleware: Redirect HTTP to HTTPS
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+
+      # Middleware: Redirect www to non-www
+      - "traefik.http.middlewares.www-redirect.redirectregex.regex=^https://www\\.moritz-waechter\\.de/(.*)"
+      - "traefik.http.middlewares.www-redirect.redirectregex.replacement=https://moritz-waechter.de/$${1}"
+      - "traefik.http.middlewares.www-redirect.redirectregex.permanent=true"
+
+networks:
+  traefik:
+    external: true
