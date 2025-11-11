@@ -15,7 +15,7 @@
   background: var(--secondary-50);
 }
 
-[data-theme='dark'] .backgroundGradient {
+:global(html.dark) .backgroundGradient {
   background: var(--dark-background);
 }
 
@@ -39,7 +39,7 @@
   color: var(--ifm-font-color-base);
 }
 
-[data-theme='dark'] .heroTitle {
+:global(html.dark) .heroTitle {
   color: white;
 }
 
@@ -50,7 +50,7 @@
   line-height: 1.75;
 }
 
-[data-theme='dark'] .heroDescription {
+:global(html.dark) .heroDescription {
   color: rgb(209, 213, 219);
 }
 
@@ -73,7 +73,7 @@
   margin-bottom: 2rem;
 }
 
-[data-theme='dark'] .projectCard {
+:global(html.dark) .projectCard {
   background: var(--dark-background);
 }
 
@@ -94,7 +94,7 @@
   justify-content: center;
 }
 
-[data-theme='dark'] .projectIconContainer {
+:global(html.dark) .projectIconContainer {
   background: var(--color-secondary-dark);
   opacity: 0.3;
 }
@@ -105,7 +105,7 @@
   color: var(--ifm-color-primary);
 }
 
-[data-theme='dark'] .projectIcon {
+:global(html.dark) .projectIcon {
   color: var(--ifm-color-primary-lightest);
 }
 
@@ -117,7 +117,7 @@
   color: rgb(17, 24, 39);
 }
 
-[data-theme='dark'] .projectTitle {
+:global(html.dark) .projectTitle {
   color: white;
 }
 
@@ -130,7 +130,7 @@
   font-weight: 500;
 }
 
-[data-theme='dark'] .projectDescription {
+:global(html.dark) .projectDescription {
   color: rgb(209, 213, 219);
 }
 
@@ -146,7 +146,7 @@
   margin-bottom: 1rem;
 }
 
-[data-theme='dark'] .projectLongDescription p {
+:global(html.dark) .projectLongDescription p {
   color: rgb(156, 163, 175);
 }
 
@@ -180,7 +180,7 @@
   margin-top: 0;
 }
 
-[data-theme='dark'] .projectFeatures h3 {
+:global(html.dark) .projectFeatures h3 {
   color: white;
 }
 
@@ -192,7 +192,7 @@
   margin-bottom: 1rem;
 }
 
-[data-theme='dark'] .projectFeatures p {
+:global(html.dark) .projectFeatures p {
   color: rgb(156, 163, 175);
 }
 
@@ -217,11 +217,11 @@
   font-weight: bold;
 }
 
-[data-theme='dark'] .projectFeatures li {
+:global(html.dark) .projectFeatures li {
   color: rgb(156, 163, 175);
 }
 
-[data-theme='dark'] .projectFeatures li::before {
+:global(html.dark) .projectFeatures li::before {
   color: var(--ifm-color-primary-lightest);
 }
 

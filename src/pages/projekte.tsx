@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import Layout from '@theme/Layout';
+import { Layout } from '@/components';
 import styles from './projekte.module.css';
 
 export default function ProjektePage(): ReactNode {

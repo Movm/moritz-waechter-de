@@ -15,7 +15,7 @@
   background: var(--secondary-50);
 }
 
-[data-theme='dark'] .backgroundGradient {
+:global(html.dark) .backgroundGradient {
   background: var(--dark-background);
 }
 
@@ -36,21 +36,21 @@
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--ifm-font-color-base);
+  color: #1a1a1a;
 }
 
-[data-theme='dark'] .heroTitle {
+:global(html.dark) .heroTitle {
   color: white;
 }
 
 .heroDescription {
   font-family: 'Open Sans', ui-sans-serif, system-ui;
   font-size: 1.25rem;
-  color: var(--ifm-font-color-base);
+  color: #1a1a1a;
   line-height: 1.75;
 }
 
-[data-theme='dark'] .heroDescription {
+:global(html.dark) .heroDescription {
   color: rgb(209, 213, 219);
 }
 
@@ -102,7 +102,7 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-[data-theme='dark'] .iconWrapper {
+:global(html.dark) .iconWrapper {
   background: var(--dark-background);
 }
 
@@ -113,7 +113,11 @@
 }
 
 .iconOrange {
-  color: var(--ifm-color-primary);
+  color: var(--primary-600);
+}
+
+:global(html.dark) .iconOrange {
+  color: var(--primary-400);
 }
 
 
@@ -126,7 +130,7 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-[data-theme='dark'] .contentContainer {
+:global(html.dark) .contentContainer {
   background: var(--dark-background);
 }
 
@@ -138,7 +142,7 @@
   color: rgb(17, 24, 39);
 }
 
-[data-theme='dark'] .webinarTitle {
+:global(html.dark) .webinarTitle {
   color: white;
 }
 
@@ -155,13 +159,13 @@
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--ifm-color-primary);
-  background: var(--color-secondary-lighter);
+  color: var(--primary-600);
+  background: var(--secondary-100);
 }
 
-[data-theme='dark'] .badge {
-  color: var(--ifm-color-primary-lightest);
-  background: var(--color-secondary-dark);
+:global(html.dark) .badge {
+  color: var(--primary-300);
+  background: var(--secondary-700);
 }
 
 .webinarDescription {
@@ -172,7 +176,7 @@
   line-height: 1.75;
 }
 
-[data-theme='dark'] .webinarDescription {
+:global(html.dark) .webinarDescription {
   color: rgb(209, 213, 219);
 }
 
@@ -204,7 +208,7 @@
   color: rgb(17, 24, 39);
 }
 
-[data-theme='dark'] .contactTitle {
+:global(html.dark) .contactTitle {
   color: white;
 }
 
@@ -216,7 +220,7 @@
   line-height: 1.75;
 }
 
-[data-theme='dark'] .contactDescription {
+:global(html.dark) .contactDescription {
   color: rgb(209, 213, 219);
 }
 

@@ -1,18 +1,46 @@
 import type {ReactNode} from 'react';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { Layout } from '@/components';
 import styles from './index.module.css';
 
+// Animation variants
+const fadeInUp = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.6, ease: 'easeOut' }
+};
+
+const Section = ({ children, className }: { children: ReactNode; className?: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  return (
+    <motion.section
+      ref={ref}
+      className={className}
+      initial="initial"
+      animate={isInView ? "animate" : "initial"}
+      variants={fadeInUp}
+    >
+      {children}
+    </motion.section>
+  );
+};
+
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
       title="Moritz Wächter - Politik und Kommunikation"
       description="Hi, ich bin Moritz Wächter">
       <div className={styles.container}>
         {/* Hero Section */}
-        <section className={styles.heroSection}>
+        <motion.section
+          className={styles.heroSection}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
           <div className={styles.heroContent}>
             <div className={styles.heroImage}>
               <img
@@ -28,10 +56,10 @@ export default function Home(): ReactNode {
               </h1>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Facts Section */}
-        <section className={styles.factsSection}>
+        <Section className={styles.factsSection}>
           <div className={styles.factsContent}>
             <h2 className={styles.sectionHeading}>Facts</h2>
             <div className={styles.factsText}>
@@ -50,10 +78,10 @@ export default function Home(): ReactNode {
               </p>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* Beruf Section */}
-        <section className={styles.infoSection}>
+        <Section className={styles.infoSection}>
           <div className={styles.infoContent}>
             <h2 className={styles.sectionHeading}>Beruf</h2>
             <div className={styles.infoText}>
@@ -70,10 +98,10 @@ export default function Home(): ReactNode {
               </p>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* Politik Section */}
-        <section className={styles.factsSection}>
+        <Section className={styles.factsSection}>
           <div className={styles.factsContent}>
             <h2 className={styles.sectionHeading}>Politik</h2>
             <div className={styles.factsText}>
@@ -82,10 +110,10 @@ export default function Home(): ReactNode {
               </p>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* Medien Section */}
-        <section className={styles.infoSection}>
+        <Section className={styles.infoSection}>
           <div className={styles.infoContent}>
             <h2 className={styles.sectionHeading}>Medien</h2>
             <div className={styles.infoText}>
@@ -102,10 +130,10 @@ export default function Home(): ReactNode {
               </p>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* Contact Section */}
-        <section className={styles.contactSection}>
+        <Section className={styles.contactSection}>
           <div className={styles.contactContent}>
             <div>
               <h2 className={styles.contactHeading}>Kontakt</h2>
@@ -133,7 +161,7 @@ export default function Home(): ReactNode {
               </a>
             </div>
           </div>
-        </section>
+        </Section>
 
       </div>
     </Layout>

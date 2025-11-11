@@ -47,23 +47,23 @@
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--ifm-font-color-base);
+  color: rgb(17, 24, 39);
 }
 
-[data-theme='dark'] .heroTitle {
+:global(html.dark) .heroTitle {
   color: white;
 }
 
 .heroDescription {
   font-family: 'Open Sans', ui-sans-serif, system-ui;
   font-size: 1.25rem;
-  color: var(--ifm-font-color-base);
+  color: rgb(75, 85, 99);
   line-height: 1.75;
   margin-bottom: 2rem;
 }
 
-[data-theme='dark'] .heroDescription {
-  color: rgb(209, 213, 219);
+:global(html.dark) .heroDescription {
+  color: rgb(212, 212, 212);
 }
 
 .copyButton {
@@ -85,8 +85,8 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-[data-theme='dark'] .invitationContainer {
-  background: rgb(31, 41, 55);
+:global(html.dark) .invitationContainer {
+  background: rgb(38, 38, 38);
 }
 
 /* Remove default MDX/Docusaurus margins */
@@ -109,7 +109,7 @@
   text-align: center;
 }
 
-[data-theme='dark'] .invitationTitle {
+:global(html.dark) .invitationTitle {
   color: white;
 }
 
@@ -120,7 +120,7 @@
   margin-bottom: 1.5rem;
 }
 
-[data-theme='dark'] .greeting {
+:global(html.dark) .greeting {
   color: white;
 }
 
@@ -132,20 +132,20 @@
   margin-bottom: 2rem;
 }
 
-[data-theme='dark'] .introduction {
-  color: rgb(209, 213, 219);
+:global(html.dark) .introduction {
+  color: rgb(212, 212, 212);
 }
 
 .sectionTitle {
   font-family: 'Raleway', ui-serif, Georgia, serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--ifm-color-primary);
+  color: var(--color-600);
   margin: 2rem 0 1rem 0;
 }
 
-[data-theme='dark'] .sectionTitle {
-  color: var(--ifm-color-primary-lightest);
+:global(html.dark) .sectionTitle {
+  color: var(--color-300);
 }
 
 .sectionText {
@@ -156,8 +156,8 @@
   margin-bottom: 1rem;
 }
 
-[data-theme='dark'] .sectionText {
-  color: rgb(209, 213, 219);
+:global(html.dark) .sectionText {
+  color: rgb(212, 212, 212);
 }
 
 .detailsList, .learningList, .targetList, .benefitsList {
@@ -169,11 +169,11 @@
   padding-left: 1.5rem;
 }
 
-[data-theme='dark'] .detailsList, 
-[data-theme='dark'] .learningList, 
-[data-theme='dark'] .targetList, 
-[data-theme='dark'] .benefitsList {
-  color: rgb(209, 213, 219);
+:global(html.dark) .detailsList,
+:global(html.dark) .learningList,
+:global(html.dark) .targetList,
+:global(html.dark) .benefitsList {
+  color: rgb(212, 212, 212);
 }
 
 .detailsList li, .learningList li, .targetList li, .benefitsList li {
@@ -188,8 +188,8 @@
   margin: 2rem 0 1.5rem 0;
 }
 
-[data-theme='dark'] .closing {
-  color: rgb(209, 213, 219);
+:global(html.dark) .closing {
+  color: rgb(212, 212, 212);
 }
 
 .signature {
@@ -200,8 +200,94 @@
   margin-top: 2rem;
 }
 
-[data-theme='dark'] .signature {
+:global(html.dark) .signature {
   color: white;
+}
+
+/* MDX Content Typography */
+.invitationContent {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+}
+
+.invitationContent h2 {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  margin: 2rem 0 1rem 0;
+}
+
+.invitationContent h2:first-child {
+  margin-top: 0;
+}
+
+:global(html.dark) .invitationContent h2 {
+  color: white;
+}
+
+.invitationContent h3 {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-600);
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+:global(html.dark) .invitationContent h3 {
+  color: var(--color-300);
+}
+
+.invitationContent h4 {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-700);
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+:global(html.dark) .invitationContent h4 {
+  color: var(--color-400);
+}
+
+.invitationContent p {
+  font-size: 1rem;
+  color: rgb(75, 85, 99);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+:global(html.dark) .invitationContent p {
+  color: rgb(212, 212, 212);
+}
+
+.invitationContent ul {
+  font-size: 1rem;
+  color: rgb(75, 85, 99);
+  line-height: 1.75;
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+:global(html.dark) .invitationContent ul {
+  color: rgb(212, 212, 212);
+}
+
+.invitationContent li {
+  margin-bottom: 0.5rem;
+}
+
+.invitationContent strong {
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+}
+
+:global(html.dark) .invitationContent strong {
+  color: white;
+}
+
+.invitationContent em {
+  font-style: italic;
 }
 
 /* Contact Section */
@@ -224,7 +310,7 @@
   color: rgb(17, 24, 39);
 }
 
-[data-theme='dark'] .contactTitle {
+:global(html.dark) .contactTitle {
   color: white;
 }
 
@@ -236,8 +322,8 @@
   line-height: 1.75;
 }
 
-[data-theme='dark'] .contactDescription {
-  color: rgb(209, 213, 219);
+:global(html.dark) .contactDescription {
+  color: rgb(212, 212, 212);
 }
 
 .contactButton {

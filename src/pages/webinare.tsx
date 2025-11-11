@@ -1,6 +1,6 @@
 import type {ReactNode} from 'react';
-import Link from '@docusaurus/Link';
-import Layout from '@theme/Layout';
+import { Link } from 'react-router-dom';
+import { Layout } from '@/components';
 import styles from './webinare.module.css';
 import { HiCog, HiSparkles } from 'react-icons/hi';
 
@@ -76,15 +76,15 @@ export default function WebinarePage(): ReactNode {
             <p className={styles.contactDescription}>
               Kontaktieren Sie uns für weitere Informationen oder um sich für ein Webinar anzumelden.
             </p>
-            <Link
-              to="/"
+            <a
+              href="mailto:info@moritz-waechter.de"
               className={styles.contactButton}
             >
               Kontakt aufnehmen
               <svg className={styles.buttonIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

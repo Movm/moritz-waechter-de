@@ -1,5 +1,5 @@
-import React, { useState, useRef, ReactNode } from 'react';
-import Link from '@docusaurus/Link';
+import { useState, useRef, ReactNode } from 'react';
+import { Layout } from '@/components';
 import styles from '../einladung-styles.module.css';
 
 interface InvitationLayoutProps {
@@ -23,6 +23,7 @@ export default function InvitationLayout({ title, description, children }: Invit
   };
 
   return (
+    <Layout title={title} description={description}>
       <div className={styles.container}>
         {/* Background Gradient */}
         <div className={styles.backgroundGradient} />
@@ -62,12 +63,13 @@ export default function InvitationLayout({ title, description, children }: Invit
         {/* Invitation Content */}
         <div className={styles.invitationSection}>
           <div className={styles.invitationContainer} ref={invitationRef}>
-            <div className="invitation-content">
+            <div className={styles.invitationContent}>
               {children}
             </div>
           </div>
         </div>
 
       </div>
+    </Layout>
   );
 }

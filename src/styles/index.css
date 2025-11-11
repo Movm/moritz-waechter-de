@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Import existing modular CSS files before Tailwind */
+@import '../css/buttons.css';
+@import '../css/legal-pages.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Color System ("Tanne") - Primary digital interaction color */
+    --primary-50: #e8f2ee;
+    --primary-100: #c8dfd5;
+    --primary-200: #a3c9b8;
+    --primary-300: #7db39a;
+    --primary-400: #60a183;
+    --primary-500: #428f6c;
+    --primary-600: #005538;  /* Base "Tanne" color */
+    --primary-700: #004a2f;
+    --primary-800: #003e26;
+    --primary-900: #00321d;
+    --primary-950: #002315;
+
+    /* Secondary Color System ("Eucalyptus") */
+    --secondary-50: #F0F4F3;
+    --secondary-100: #D5E1DC;
+    --secondary-200: #BACEC6;
+    --secondary-300: #A0BBB0;
+    --secondary-400: #85A899;
+    --secondary-500: #6A9583;
+    --secondary-600: #5F8575;  /* Base "Eucalyptus" color */
+    --secondary-700: #445F54;
+    --secondary-800: #31453C;
+    --secondary-900: #1E2A25;
+    --secondary-950: #0B0F0D;
+
+    /* Dark mode background */
+    --dark-background: #2a2a2a;
+    --dark-background-darker: #1e1e1e;
+
+    /* Semantic color names */
+    --color-accent: var(--secondary-100);
+    --color-secondary: var(--secondary-600);
+
+    /* Gradients using tanne and eucalyptus */
+    --background-gradient: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+    --accent-gradient: linear-gradient(to right, var(--primary-500) 0%, var(--primary-600) 100%);
+  }
+
+  .dark {
+    /* Semantic colors for dark mode */
+    --color-accent: var(--secondary-200);
+    --color-secondary: var(--secondary-500);
+
+    /* Gradients for dark mode */
+    --background-gradient: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-900) 100%);
+    --accent-gradient: linear-gradient(to right, var(--primary-400) 0%, var(--primary-600) 100%);
+  }
+
+  body {
+    @apply font-sans text-gray-900 dark:text-gray-100 dark:bg-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Utility classes for gradients */
+  .bg-gradient-tanne {
+    background-image: var(--background-gradient);
+  }
+
+  .bg-gradient-accent {
+    background-image: var(--accent-gradient);
+  }
+}
+
+/* Theme toggle animation */
+@keyframes fadeRotate {
+  0% {
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}

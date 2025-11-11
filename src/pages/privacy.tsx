@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import Layout from '@theme/Layout';
+import { Layout } from '@/components';
 
 export default function PrivacyPage(): ReactNode {
   return (
