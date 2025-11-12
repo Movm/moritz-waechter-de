@@ -6,22 +6,10 @@ export default function ProjektePage(): ReactNode {
   return (
     <Layout
       title="Grünerator"
-      description="Entdecken Sie unsere KI-Projekte, die echten Mehrwert schaffen">
+      description="Entdecke unsere KI-Projekte, die echten Mehrwert schaffen">
       <div className={styles.container}>
         {/* Unified Gradient Background */}
         <div className={styles.backgroundGradient} />
-        
-        {/* Hero Section */}
-        <div className={styles.heroSection}>
-          <div className={styles.heroContainer}>
-            <h1 className={styles.heroTitle}>
-              Grünerator
-            </h1>
-            <p className={styles.heroDescription}>
-              Entdecken Sie unsere KI-Projekte, die echten Mehrwert schaffen
-            </p>
-          </div>
-        </div>
 
         {/* Projects Section */}
         <div className={styles.projectsSection}>

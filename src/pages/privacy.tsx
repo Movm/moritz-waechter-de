@@ -18,7 +18,7 @@ export default function PrivacyPage(): ReactNode {
             <div className="legal-page-card">
               <div className="legal-page-prose">
                 <p>
-                  Dem Thema Datenschutz messe ich eine große Bedeutung bei. Deshalb ist der Schutz Ihrer persönlichen Daten für mich ein wichtiges Anliegen. Eine Nutzung der Internetseiten von Moritz Wächter ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services von mir über meine Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine gesetzliche Grundlage, holen ich generell eine Einwilligung der betroffenen Person ein. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Ich weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+                  Dem Thema Datenschutz messe ich eine große Bedeutung bei. Deshalb ist der Schutz deiner persönlichen Daten für mich ein wichtiges Anliegen. Eine Nutzung der Internetseiten von Moritz Wächter ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services von mir über meine Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine gesetzliche Grundlage, holen ich generell eine Einwilligung der betroffenen Person ein. Diese Daten werden ohne deine ausdrückliche Zustimmung nicht an Dritte weitergegeben. Ich weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
                 </p>
 
                 <h2>Hosting</h2>
@@ -31,7 +31,7 @@ export default function PrivacyPage(): ReactNode {
 
                 <h2>Persönliche Daten und Kontaktformular</h2>
                 <p>
-                  Persönliche Daten, die Sie mir elektronisch übermitteln, z.B. Ihren Namen, Postanschrift, E-Mail-Adresse oder andere persönlichen Angaben, werden von mir nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben. Ich werden Ihnen nur Informationen zuschicken, sofern Sie sich für entsprechende Dienste angemeldet haben.
+                  Persönliche Daten, die du mir elektronisch übermittelst, z.B. deinen Namen, Postanschrift, E-Mail-Adresse oder andere persönlichen Angaben, werden von mir nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben. Ich werde dir nur Informationen zuschicken, sofern du dich für entsprechende Dienste angemeldet hast.
                 </p>
 
                 <h2>Erhebung von Zugriffsdaten und Logfiles</h2>
@@ -46,7 +46,7 @@ export default function PrivacyPage(): ReactNode {
 
                 <h2>Recht auf Auskunft, Löschung, Sperrung</h2>
                 <p>
-                  Ich erteile Ihnen jederzeit unentgeltlich Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung. Sie haben auch ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an mich wenden.
+                  Ich erteile dir jederzeit unentgeltlich Auskunft über deine gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung. Du hast auch ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten kannst du dich jederzeit unter der im Impressum angegebenen Adresse an mich wenden.
                 </p>
 
                 <h2>Löschung von Daten</h2>
@@ -56,12 +56,12 @@ export default function PrivacyPage(): ReactNode {
 
                 <h2>Links zu anderen Websites</h2>
                 <p>
-                  Sie finden auf unseren Seiten Links zu anderen Seiten im Internet. Für alle diese Links und Banner gilt, dass ich keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten haben. Deswegen übernehmen ich auch keinerlei Verantwortung für Inhalt, Gestaltung und die Datenschutzbestimmungen dieser Seiten.
+                  Du findest auf unseren Seiten Links zu anderen Seiten im Internet. Für alle diese Links und Banner gilt, dass ich keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten haben. Deswegen übernehmen ich auch keinerlei Verantwortung für Inhalt, Gestaltung und die Datenschutzbestimmungen dieser Seiten.
                 </p>
 
                 <h2>Verwendung von Cookies</h2>
                 <p>
-                  Es gibt eine Technik, genannt „Cookies", mit deren Hilfe Informationen aus einer Website an Ihre Bedürfnisse angepasst werden können. Ein Cookie ist ein Datenelement, das eine Website an Ihren Browser schicken kann, um es dort auf Ihrem System zu speichern. Gelegentlich nutzen auch ich temporäre Cookies, damit ich Sie effektiver unterstützen können, wenn Sie auf eine solche Website zurückkommen. Sie haben jedoch die Möglichkeit, Ihren Browser so einzustellen, dass er Sie davon in Kenntnis setzt, wenn Sie ein Cookie erhalten. Dann können Sie selbst entscheiden, ob Sie das akzeptieren oder nicht.
+                  Es gibt eine Technik, genannt „Cookies", mit deren Hilfe Informationen aus einer Website an deine Bedürfnisse angepasst werden können. Ein Cookie ist ein Datenelement, das eine Website an deinen Browser schicken kann, um es dort auf deinem System zu speichern. Gelegentlich nutzen auch ich temporäre Cookies, damit ich dich effektiver unterstützen können, wenn du auf eine solche Website zurückkommst. Du hast jedoch die Möglichkeit, deinen Browser so einzustellen, dass er dich davon in Kenntnis setzt, wenn du ein Cookie erhältst. Dann kannst du selbst entscheiden, ob du das akzeptierst oder nicht.
                 </p>
                 <p>
                   Firefox (Windows): →Extras →Einstellungen →Datenschutz →Chronik nach benutzerdefinierten Einstellungen anlegen
@@ -80,13 +80,13 @@ export default function PrivacyPage(): ReactNode {
 
                 <h2>KONTAKT</h2>
                 <p>
-                  Datenschutz liegt mir am Herzen! Bei Fragen erreichen Sie mich gerne hier:
+                  Datenschutz liegt mir am Herzen! Bei Fragen erreichst du mich gerne hier:
                 </p>
                 <p>
                   Moritz Wächter<br />
-                  Grantham-Allee 19<br />
-                  53757 Sankt Augustin<br />
-                  0176/64168661
+                  Villestr 6-8<br />
+                  53347 Alfter<br />
+                  0162 9830496
                 </p>
               </div>
             </div>

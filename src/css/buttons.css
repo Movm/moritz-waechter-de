@@ -1,7 +1,7 @@
 /**
  * Standard Button Styles
  *
- * Centralized button design using phtalo green gradient
+ * Centralized button design using eucalyptus green gradient
  * Used across all pages for consistent button styling
  */
 
@@ -15,26 +15,26 @@
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background: linear-gradient(to right, var(--primary-600), var(--primary-700));
+  background: linear-gradient(to right, var(--secondary-600), var(--secondary-700));
   border: none;
   border-radius: 9999px;
   cursor: pointer;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .standardButton:hover {
-  background: linear-gradient(to right, var(--primary-700), var(--primary-800));
+  background: linear-gradient(to right, var(--secondary-600), var(--secondary-800));
   box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
 [data-theme='dark'] .standardButton {
-  background: linear-gradient(to right, var(--primary-500), var(--primary-600));
+  background: linear-gradient(to right, var(--secondary-500), var(--secondary-600));
 }
 
 [data-theme='dark'] .standardButton:hover {
-  background: linear-gradient(to right, var(--primary-400), var(--primary-500));
+  background: linear-gradient(to right, var(--secondary-400), var(--secondary-600));
 }
 
 /* Standard button link - for <a> elements */
@@ -47,27 +47,27 @@
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background: linear-gradient(to right, var(--primary-600), var(--primary-700));
+  background: linear-gradient(to right, var(--secondary-600), var(--secondary-700));
   border-radius: 9999px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .standardButtonLink:hover {
   text-decoration: none;
   color: white;
-  background: linear-gradient(to right, var(--primary-700), var(--primary-800));
+  background: linear-gradient(to right, var(--secondary-600), var(--secondary-800));
   box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
 [data-theme='dark'] .standardButtonLink {
-  background: linear-gradient(to right, var(--primary-500), var(--primary-600));
+  background: linear-gradient(to right, var(--secondary-500), var(--secondary-600));
 }
 
 [data-theme='dark'] .standardButtonLink:hover {
-  background: linear-gradient(to right, var(--primary-400), var(--primary-500));
+  background: linear-gradient(to right, var(--secondary-400), var(--secondary-600));
 }
 
 /* Button icon styling */

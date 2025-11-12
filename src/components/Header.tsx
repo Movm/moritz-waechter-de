@@ -95,26 +95,26 @@ export const Header: React.FC = () => {
             onClick={toggleMenu}
             className="md:hidden hover:scale-110 active:scale-95 transition-transform duration-200 ease-in-out p-1"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.95 }}
           >
             <AnimatePresence mode="wait" initial={false}>
               {isMenuOpen ? (
                 <motion.div
                   key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.1 }}
                 >
                   <HiX className="w-6 h-6 text-primary-600 dark:text-primary-400" />
                 </motion.div>
               ) : (
                 <motion.div
                   key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.1 }}
                 >
                   <HiMenu className="w-6 h-6 text-primary-600 dark:text-primary-400" />
                 </motion.div>

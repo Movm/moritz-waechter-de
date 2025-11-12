@@ -47,22 +47,10 @@ export default function WebinarePage(): ReactNode {
   return (
     <Layout
       title="Webinare"
-      description="Erweitern Sie Ihr Wissen über Künstliche Intelligenz mit unseren interaktiven Online-Seminaren">
+      description="Erweitere dein Wissen über Künstliche Intelligenz mit unseren interaktiven Online-Seminaren">
       <div className={styles.container}>
         {/* Unified Gradient Background */}
         <div className={styles.backgroundGradient} />
-        
-        {/* Hero Section */}
-        <div className={styles.heroSection}>
-          <div className={styles.heroContainer}>
-            <h1 className={styles.heroTitle}>
-              Webinare
-            </h1>
-            <p className={styles.heroDescription}>
-              Erweitern Sie Ihr Wissen über Künstliche Intelligenz mit unseren interaktiven Online-Seminaren
-            </p>
-          </div>
-        </div>
 
         {/* Webinars Section */}
         <WebinarLeftRightSection items={webinars} />
@@ -74,7 +62,7 @@ export default function WebinarePage(): ReactNode {
               Interesse an einem Webinar?
             </h2>
             <p className={styles.contactDescription}>
-              Kontaktieren Sie uns für weitere Informationen oder um sich für ein Webinar anzumelden.
+              Kontaktiere mich für weitere Informationen oder um dich für ein Webinar anzumelden.
             </p>
             <a
               href="mailto:info@moritz-waechter.de"
