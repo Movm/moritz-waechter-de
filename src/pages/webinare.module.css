@@ -57,7 +57,7 @@
 /* Webinars Section */
 .webinarsSection {
   position: relative;
-  padding: 4rem 1.5rem;
+  padding: 6rem 1.5rem 4rem 1.5rem;
 }
 
 .webinarsContainer {
@@ -235,7 +235,7 @@
   }
   
   .webinarsSection {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem 2rem;
   }
   
   .contactSection {

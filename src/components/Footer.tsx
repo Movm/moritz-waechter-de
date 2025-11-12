@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-900 to-primary-950 dark:from-dark-darker dark:via-dark-darker dark:to-primary-950 text-gray-300 mt-auto">
+    <footer className="bg-gradient-to-br from-dark-darker via-dark-darker to-secondary-900 text-gray-300 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About Section */}
