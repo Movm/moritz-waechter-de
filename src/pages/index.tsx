@@ -199,7 +199,7 @@ export default function Home(): ReactNode {
                   </motion.a>
 
                   <motion.a
-                    href="https://www.linkedin.com/in/moritz-waechter/"
+                    href="https://www.linkedin.com/in/moritz-w%C3%A4chter-6ab033210/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${styles.actionCard} ${styles.actionCardSmall}`}
@@ -236,7 +236,7 @@ export default function Home(): ReactNode {
                   </motion.a>
 
                   <motion.a
-                    href="https://www.linkedin.com/in/moritz-waechter/"
+                    href="https://www.linkedin.com/in/moritz-w%C3%A4chter-6ab033210/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${styles.actionCard} ${styles.actionCardSmall}`}
