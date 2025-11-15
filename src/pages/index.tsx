@@ -1,7 +1,8 @@
 import type {ReactNode} from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Layout } from '@/components';
+import { useRef, useState } from 'react';
+import { Layout, ChatInterface } from '@/components';
+import type { ChatTopic } from '@/types/chat';
 import styles from './index.module.css';
 
 // Animation variants
@@ -29,6 +30,19 @@ const Section = ({ children, className }: { children: ReactNode; className?: str
 };
 
 export default function Home(): ReactNode {
+  const [showChat, setShowChat] = useState(false);
+  const [selectedTopic, setSelectedTopic] = useState<ChatTopic | null>(null);
+
+  const handleChatStart = (topic: ChatTopic) => {
+    setSelectedTopic(topic);
+    setShowChat(true);
+  };
+
+  const handleChatClose = () => {
+    setShowChat(false);
+    setSelectedTopic(null);
+  };
+
   return (
     <Layout
       title="Moritz Wächter - Politik und Kommunikation"
@@ -132,34 +146,126 @@ export default function Home(): ReactNode {
           </div>
         </Section>
 
-        {/* Contact Section */}
+        {/* Contact & Chat Section */}
         <Section className={styles.contactSection}>
           <div className={styles.contactContent}>
-            <div>
-              <h2 className={styles.contactHeading}>Kontakt</h2>
-            </div>
-            <div className={styles.contactLinks}>
-              <a
-                href="mailto:info@moritz-waechter.de"
-                className={styles.contactLink}
+            {!showChat ? (
+              <motion.div
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3 }}
               >
-                <svg className={styles.contactIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <span>info@moritz-waechter.de</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/moritz-w%C3%A4chter-6ab033210"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.contactLink}
-              >
-                <svg className={styles.contactIcon} fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                <span>LinkedIn</span>
-              </a>
-            </div>
+                <h2 className={styles.contactHeading}>Wie kann ich dir helfen?</h2>
+                <div className={styles.actionCards}>
+                  {/* <motion.button
+                    className={styles.actionCard}
+                    onClick={() => handleChatStart('frage')}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    whileHover={{ scale: 1.01, y: -2 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <div className={styles.actionCardIcon}>💬</div>
+                    <h3 className={styles.actionCardTitle}>Eine Frage stellen</h3>
+                  </motion.button>
+
+                  <motion.button
+                    className={styles.actionCard}
+                    onClick={() => handleChatStart('webinar')}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                    whileHover={{ scale: 1.01, y: -2 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <div className={styles.actionCardIcon}>🎓</div>
+                    <h3 className={styles.actionCardTitle}>Ein Webinar buchen</h3>
+                  </motion.button> */}
+
+                  <motion.a
+                    href="mailto:info@moritz-waechter.de"
+                    className={`${styles.actionCard} ${styles.actionCardSmall}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    whileHover={{ scale: 1.01, y: -2 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <svg className={styles.actionCardIconSvg} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <h3 className={styles.actionCardTitle}>E-Mail schreiben</h3>
+                  </motion.a>
+
+                  <motion.a
+                    href="https://www.linkedin.com/in/moritz-waechter/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.actionCard} ${styles.actionCardSmall}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                    whileHover={{ scale: 1.01, y: -2 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <svg className={styles.actionCardIconSvg} fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <h3 className={styles.actionCardTitle}>Vernetzen</h3>
+                  </motion.a>
+                </div>
+              </motion.div>
+            ) : (
+              <>
+                {/* Contact buttons stay visible above chat */}
+                <div className={styles.contactButtonsRow}>
+                  <motion.a
+                    href="mailto:info@moritz-waechter.de"
+                    className={`${styles.actionCard} ${styles.actionCardSmall}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    whileHover={{ scale: 1.01, y: -2 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <svg className={styles.actionCardIconSvg} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <h3 className={styles.actionCardTitle}>E-Mail schreiben</h3>
+                  </motion.a>
+
+                  <motion.a
+                    href="https://www.linkedin.com/in/moritz-waechter/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.actionCard} ${styles.actionCardSmall}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                    whileHover={{ scale: 1.01, y: -2 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <svg className={styles.actionCardIconSvg} fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <h3 className={styles.actionCardTitle}>Vernetzen</h3>
+                  </motion.a>
+                </div>
+
+                <motion.div
+                  className={styles.chatWrapper}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <ChatInterface
+                    initialTopic={selectedTopic}
+                    onClose={handleChatClose}
+                  />
+                </motion.div>
+              </>
+            )}
           </div>
         </Section>
 
