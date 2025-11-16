@@ -1,0 +1,8 @@
+# robots.txt for moritz-waechter.de
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://moritz-waechter.de/sitemap.xml
