@@ -104,7 +104,7 @@ export default function Home(): ReactNode {
         </Section>
 
         {/* Section 3: Politik */}
-        <Section className={styles.imageTextSection}>
+        <Section className={`${styles.imageTextSection} ${styles.whiteBackground}`}>
           <div className={styles.verticalStackSection}>
             <div className={styles.verticalStackText}>
               <h2 className={styles.imageTextHeading}>
@@ -179,7 +179,6 @@ export default function Home(): ReactNode {
 
             <ContactForm />
           </div>
-          <div className={styles.contactAccentBar}></div>
         </Section>
 
       </div>

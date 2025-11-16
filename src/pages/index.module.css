@@ -285,7 +285,7 @@
 .contactSection {
   position: relative;
   background: white;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem 6rem 2rem;
 }
 
 :global(html.dark) .contactSection {
@@ -382,26 +382,6 @@
   color: inherit;
 }
 
-.contactAccentBar {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 36px;
-  background: var(--secondary-200);
-  z-index: 0;
-}
-
-@media (min-width: 768px) {
-  .contactAccentBar {
-    display: block;
-  }
-}
-
-:global(html.dark) .contactAccentBar {
-  background: var(--secondary-700);
-}
 
 /* Footer */
 .footer {
@@ -479,8 +459,8 @@
   top: -4rem;
   right: -2rem;
   width: calc(10vw + 2rem);
-  height: calc(100% + 8rem);
-  background: var(--secondary-200);
+  height: calc(100% + 4rem);
+  background: var(--secondary-100);
   z-index: 0;
 }
 
@@ -498,6 +478,7 @@
 .secondary100WithSecondary200Line {
   position: relative;
   background: var(--secondary-100);
+  padding-top: 2rem;
 }
 
 :global(html.dark) .secondary100WithSecondary200Line {
@@ -511,7 +492,14 @@
   left: 0;
   right: 0;
   height: 36px;
-  background: var(--secondary-200);
+  background: var(--secondary-100);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .secondary100WithSecondary200Line::after {
+    display: block;
+  }
 }
 
 :global(html.dark) .secondary100WithSecondary200Line::after {
@@ -604,6 +592,13 @@
 /* Text column styling */
 .textColumn {
   padding: 1rem 0;
+  margin-left: 4rem;
+}
+
+@media (max-width: 767px) {
+  .textColumn {
+    margin-left: 0;
+  }
 }
 
 .imageTextHeading {
@@ -682,7 +677,12 @@
   position: relative;
   width: 100%;
   margin-top: 1rem;
+  margin-bottom: 0;
   z-index: 1;
+}
+
+.verticalStackImage img {
+  margin-bottom: 0;
 }
 
 /* Text-only section */
@@ -691,7 +691,7 @@
 }
 
 .textOnlyContent {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
