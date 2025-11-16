@@ -40,6 +40,55 @@ services:
       - "traefik.http.middlewares.www-redirect.redirectregex.replacement=https://moritz-waechter.de/$${1}"
       - "traefik.http.middlewares.www-redirect.redirectregex.permanent=true"
 
+  moritz-waechter-api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: moritz-waechter-api
+    restart: unless-stopped
+    networks:
+      - traefik
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      # Mailgun configuration (injected from Coolify)
+      - MAILGUN_API_KEY=${MAILGUN_API_KEY}
+      - MAILGUN_DOMAIN=${MAILGUN_DOMAIN}
+      - EMAIL_FROM=${EMAIL_FROM}
+      - EMAIL_TO=${EMAIL_TO}
+      # Legacy SMTP config (not currently used, kept for compatibility)
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - SMTP_FROM=${SMTP_FROM}
+      # Coolify will inject COOLIFY_URL for the main domain
+      # For preview deployments, this will be the preview URL
+      - ALLOWED_ORIGIN=${ALLOWED_ORIGIN:-$COOLIFY_URL}
+    labels:
+      # Enable Traefik for this container
+      - "traefik.enable=true"
+
+      # Define the Traefik network to use
+      - "traefik.docker.network=traefik"
+
+      # HTTP Router for API - Redirect to HTTPS
+      - "traefik.http.routers.moritz-waechter-api-http.rule=Host(`moritz-waechter.de`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.moritz-waechter-api-http.entrypoints=web"
+      - "traefik.http.routers.moritz-waechter-api-http.middlewares=redirect-to-https"
+
+      # HTTPS Router for API
+      - "traefik.http.routers.moritz-waechter-api.rule=Host(`moritz-waechter.de`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.moritz-waechter-api.entrypoints=websecure"
+      - "traefik.http.routers.moritz-waechter-api.tls=true"
+      - "traefik.http.routers.moritz-waechter-api.tls.certresolver=letsencrypt"
+
+      # Service configuration
+      - "traefik.http.services.moritz-waechter-api.loadbalancer.server.port=4000"
+
+      # Higher priority for API routes (process API routes before frontend routes)
+      - "traefik.http.routers.moritz-waechter-api.priority=100"
+
 networks:
   traefik:
     external: true

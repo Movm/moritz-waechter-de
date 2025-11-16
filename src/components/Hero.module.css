@@ -1,0 +1,117 @@
+/* Reusable Hero Component Styles */
+
+/* Hero Section */
+.heroSection {
+  background: var(--secondary-50);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 4rem 2rem;
+}
+
+:global(html.dark) .heroSection {
+  background-color: #1a2420;
+}
+
+.heroContent {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .heroContent {
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Text-only variant - centered layout */
+.textOnly .heroContent {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  text-align: center;
+}
+
+.textOnly .heroText {
+  text-align: center !important;
+}
+
+/* Hero Image Column */
+.heroImageColumn {
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .profileImage {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profileImage {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* Hero Text Column */
+.heroText {
+  text-align: left;
+}
+
+.mainHeading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0 0 1.5rem 0;
+}
+
+:global(html.dark) .mainHeading {
+  color: #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .mainHeading {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainHeading {
+    font-size: 4.5rem;
+  }
+}
+
+.heroSubtext {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+:global(html.dark) .heroSubtext {
+  color: #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .heroSubtext {
+    font-size: 1.25rem;
+  }
+}

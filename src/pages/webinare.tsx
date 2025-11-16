@@ -1,6 +1,7 @@
 import type {ReactNode} from 'react';
 import { Link } from 'react-router-dom';
-import { Layout } from '@/components';
+import { Layout, Hero } from '@/components';
+import { WebinarCalendars } from '@/components/WebinarBooking/WebinarCalendars';
 import styles from './webinare.module.css';
 import { HiCog, HiSparkles } from 'react-icons/hi';
 
@@ -49,11 +50,18 @@ export default function WebinarePage(): ReactNode {
       title="Webinare"
       description="Erweitere dein Wissen über Künstliche Intelligenz mit unseren interaktiven Online-Seminaren">
       <div className={styles.container}>
-        {/* Unified Gradient Background */}
-        <div className={styles.backgroundGradient} />
+        {/* Hero Section */}
+        <Hero
+          title="Webinare"
+          markedWord="Webinare"
+          subtitle="Erweitere dein Wissen über Künstliche Intelligenz mit interaktiven Online-Seminaren"
+        />
 
         {/* Webinars Section */}
         <WebinarLeftRightSection items={webinars} />
+
+        {/* Booking Section */}
+        <WebinarCalendars />
 
         {/* Contact Section */}
         <div className={styles.contactSection}>

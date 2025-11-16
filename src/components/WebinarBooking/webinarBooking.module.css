@@ -1,0 +1,78 @@
+/* Booking Section */
+.bookingSection {
+  position: relative;
+  padding: 4rem 1.5rem;
+}
+
+.bookingContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.bookingTitle {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: rgb(17, 24, 39);
+}
+
+:global(html.dark) .bookingTitle {
+  color: white;
+}
+
+.bookingDescription {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  color: rgb(75, 85, 99);
+  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 1.75;
+}
+
+:global(html.dark) .bookingDescription {
+  color: rgb(209, 213, 219);
+}
+
+/* Calendar Container */
+.calendarContainer {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  min-height: 600px;
+  overflow: hidden;
+}
+
+:global(html.dark) .calendarContainer {
+  background: var(--dark-background);
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .bookingSection {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bookingTitle {
+    font-size: 2.25rem;
+  }
+
+  .calendarContainer {
+    padding: 2rem;
+    min-height: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bookingTitle {
+    font-size: 3rem;
+  }
+
+  .calendarContainer {
+    min-height: 800px;
+  }
+}

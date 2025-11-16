@@ -1,0 +1,531 @@
+/* WhatsApp-Style Chat Design */
+
+/* Main Chat Container - Card with shadow */
+.chatContainer {
+  @apply w-full mx-auto;
+  @apply rounded-2xl;
+  @apply overflow-hidden;
+}
+
+/* Messages Container - WhatsApp-style background */
+.messagesContainer {
+  @apply px-16 py-8;
+  @apply flex flex-col gap-6;
+  min-height: 350px;
+  max-height: 450px;
+  overflow-y: auto;
+  background-color: #e5ddd5;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" opacity="0.03"><path d="M0 0h400v400H0z" fill="none"/><g fill="%23000"><circle cx="50" cy="50" r="2"/><circle cx="150" cy="150" r="2"/><circle cx="250" cy="50" r="2"/><circle cx="350" cy="150" r="2"/><circle cx="100" cy="250" r="2"/><circle cx="300" cy="250" r="2"/></g></svg>');
+}
+
+:global(html.dark) .messagesContainer {
+  background-color: #0b141a;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" opacity="0.05"><path d="M0 0h400v400H0z" fill="none"/><g fill="%23fff"><circle cx="50" cy="50" r="2"/><circle cx="150" cy="150" r="2"/><circle cx="250" cy="50" r="2"/><circle cx="350" cy="150" r="2"/><circle cx="100" cy="250" r="2"/><circle cx="300" cy="250" r="2"/></g></svg>');
+}
+
+/* Message Containers */
+.botMessageContainer {
+  @apply flex justify-start;
+}
+
+.userMessageContainer {
+  @apply flex justify-end;
+}
+
+/* First message - larger and centered */
+.firstMessageBubble {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .firstMessageBubble {
+    font-size: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* Bot Message Bubble - WhatsApp white */
+.botBubble {
+  max-width: 650px;
+  @apply px-5 py-4;
+  border-radius: 18px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 10px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+:global(html.dark) .botBubble {
+  background-color: #2a3942;
+  color: #e9edef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* User Message Bubble - WhatsApp green */
+.userBubble {
+  max-width: 650px;
+  @apply px-5 py-4;
+  border-radius: 18px;
+  border-top-right-radius: 4px;
+  background-color: #d9fdd3;
+  color: #1a1a1a;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+:global(html.dark) .userBubble {
+  background-color: #056162;
+  color: #e9edef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.messageLine {
+  @apply m-0;
+  line-height: 1.5;
+}
+
+.messageLine + .messageLine {
+  @apply mt-2;
+}
+
+.messageLine strong {
+  font-weight: 600;
+}
+
+/* Input Area - Floating glass effect */
+.inputArea {
+  @apply w-full px-6 pb-4;
+  background: transparent;
+  border: none;
+}
+
+/* Options Message Container - Aligns like user messages (right), except when centered */
+.optionsMessageContainer {
+  @apply flex justify-end;
+  @apply mb-4;
+}
+
+.optionsMessageContainer:has(.optionsContainerStacked) {
+  @apply justify-center;
+}
+
+/* Options Container - Horizontal layout with wrap */
+.optionsContainer {
+  @apply flex flex-row flex-wrap gap-2;
+  @apply max-w-[75%];
+}
+
+/* Options Container Stacked - Horizontal layout for initial topic selection, centered */
+.optionsContainerStacked {
+  @apply flex flex-row gap-3;
+  @apply w-full;
+  @apply justify-center;
+  @apply flex-wrap;
+}
+
+/* Option Buttons - WhatsApp-style pills */
+.optionButton {
+  @apply px-6 py-3;
+  @apply text-center;
+  @apply font-medium;
+  @apply transition-all duration-200;
+  @apply rounded-full;
+  @apply border-0;
+  font-size: 1.0625rem;
+  color: var(--color-700);
+  background-color: #f0f9ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Large Option Buttons - For initial topic selection */
+.optionButtonLarge {
+  @apply px-7 py-4;
+  @apply text-center;
+  @apply font-semibold;
+  @apply transition-all duration-200;
+  @apply rounded-full;
+  @apply border-0;
+  font-size: 1.125rem;
+  color: var(--color-700);
+  background-color: #f0f9ff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .optionButtonLarge {
+    @apply px-6 py-3;
+    font-size: 1rem;
+  }
+}
+
+:global(html.dark) .optionButton {
+  color: #a9dfd8;
+  background-color: #1e3a3f;
+}
+
+:global(html.dark) .optionButtonLarge {
+  color: #a9dfd8;
+  background-color: #1e3a3f;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.optionButton:hover:not(:disabled) {
+  background-color: #dbeafe;
+  transform: scale(1.05);
+}
+
+.optionButtonLarge:hover:not(:disabled) {
+  background-color: #dbeafe;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+:global(html.dark) .optionButton:hover:not(:disabled) {
+  background-color: #056162;
+  color: #e9edef;
+}
+
+:global(html.dark) .optionButtonLarge:hover:not(:disabled) {
+  background-color: #056162;
+  color: #e9edef;
+  box-shadow: 0 6px 16px rgba(5, 97, 98, 0.4);
+}
+
+.optionButton:disabled,
+.optionButtonLarge:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Input Container */
+.inputContainer {
+  @apply w-full;
+}
+
+.inputWrapper {
+  @apply flex gap-3;
+  @apply items-center;
+  @apply max-w-2xl mx-auto;
+}
+
+.input {
+  @apply flex-1;
+  @apply px-5 py-3;
+  @apply rounded-full;
+  @apply transition-all duration-300;
+  @apply focus:outline-none;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08),
+              0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+:global(html.dark) .input {
+  color: #e9edef;
+  background: rgba(42, 57, 66, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3),
+              0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(5, 97, 98, 0.3);
+  box-shadow: 0 6px 24px rgba(5, 97, 98, 0.15),
+              0 0 0 1px rgba(5, 97, 98, 0.1) inset;
+  transform: translateY(-1px);
+}
+
+:global(html.dark) .input:focus {
+  background: rgba(42, 57, 66, 1);
+  border-color: rgba(5, 97, 98, 0.5);
+  box-shadow: 0 6px 24px rgba(5, 97, 98, 0.3),
+              0 0 0 1px rgba(5, 97, 98, 0.2) inset;
+  transform: translateY(-1px);
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+:global(html.dark) .input::placeholder {
+  color: #667781;
+}
+
+.inputDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.inputError {
+  border-color: #dc2626;
+}
+
+:global(html.dark) .inputError {
+  border-color: #f87171;
+}
+
+.sendButton {
+  @apply w-12 h-12;
+  @apply rounded-full;
+  @apply transition-all duration-300;
+  @apply flex items-center justify-center;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-600), var(--color-700));
+  border: none;
+  box-shadow: 0 4px 16px rgba(5, 97, 98, 0.3),
+              0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--color-700), var(--color-800));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(5, 97, 98, 0.4),
+              0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+.sendButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(5, 97, 98, 0.3);
+}
+
+.sendIcon {
+  @apply w-5 h-5;
+}
+
+.errorMessage {
+  @apply mt-2 text-sm;
+  @apply px-2;
+  color: #dc2626;
+}
+
+:global(html.dark) .errorMessage {
+  color: #f87171;
+}
+
+/* Loading State */
+.loadingContainer {
+  @apply flex items-center gap-3;
+  @apply py-4;
+}
+
+.loadingSpinner {
+  @apply w-6 h-6;
+  @apply border-[3px] border-gray-300;
+  @apply rounded-full;
+  @apply animate-spin;
+  border-top-color: var(--color-600);
+}
+
+:global(html.dark) .loadingSpinner {
+  border-color: #3b4a54;
+  border-top-color: var(--color-500);
+}
+
+.loadingText {
+  @apply text-sm;
+  @apply m-0;
+  color: #667781;
+}
+
+/* Reset Button */
+.resetButton {
+  @apply inline-block;
+  @apply px-5 py-3;
+  @apply rounded-xl;
+  @apply font-medium;
+  @apply transition-all duration-200;
+  @apply border-2;
+  font-size: 1rem;
+  color: var(--color-700);
+  background-color: #ffffff;
+  border-color: var(--color-500);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+:global(html.dark) .resetButton {
+  color: #a9dfd8;
+  background-color: #2a3942;
+  border-color: #056162;
+}
+
+.resetButton:hover {
+  background-color: #f0fdf4;
+  border-color: var(--color-600);
+  transform: scale(1.02);
+}
+
+:global(html.dark) .resetButton:hover {
+  background-color: #056162;
+  border-color: #0a7c7d;
+  color: #e9edef;
+}
+
+/* Scrollbar Styling */
+.messagesContainer::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  @apply rounded-full;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+:global(html.dark) .messagesContainer::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:global(html.dark) .messagesContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+:global(html.dark) .messagesContainer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Profile Images */
+.profileImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.botMessageContainer .profileImage {
+  margin-right: 14px;
+  align-self: flex-end;
+}
+
+.userMessageContainer .profileImage {
+  margin-left: 14px;
+  align-self: flex-end;
+}
+
+/* Typing Indicator */
+.typingBubble {
+  @apply px-7 py-5;
+  border-radius: 18px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+}
+
+:global(html.dark) .typingBubble {
+  background-color: #2a3942;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.typingDots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #999;
+  animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+:global(html.dark) .dot {
+  background-color: #667781;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .messagesContainer {
+    @apply px-12;
+  }
+}
+
+@media (max-width: 768px) {
+  .messagesContainer {
+    @apply px-6;
+  }
+
+  .botBubble,
+  .userBubble {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 640px) {
+  .messagesContainer {
+    @apply px-4 py-4;
+    min-height: 400px;
+  }
+
+  .botBubble,
+  .userBubble {
+    max-width: 85%;
+    font-size: 0.95rem;
+  }
+
+  .input {
+    font-size: 0.95rem;
+    @apply px-4 py-2;
+  }
+
+  .sendButton {
+    @apply w-10 h-10;
+  }
+
+  .sendIcon {
+    @apply w-4 h-4;
+  }
+
+  .profileImage {
+    width: 32px;
+    height: 32px;
+  }
+}

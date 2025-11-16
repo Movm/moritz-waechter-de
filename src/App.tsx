@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 // Page imports
 import Home from './pages/index';
+import UeberMichPage from './pages/ueber-mich';
 import ProjektePage from './pages/projekte';
 import WebinarePage from './pages/webinare';
 import ImpressumPage from './pages/impressum';
@@ -45,6 +46,7 @@ function App() {
     <Routes>
       {/* Main pages */}
       <Route path="/" element={<Home />} />
+      <Route path="/ueber-mich" element={<UeberMichPage />} />
       <Route path="/projekte" element={<ProjektePage />} />
       <Route path="/webinare" element={<WebinarePage />} />
       <Route path="/impressum" element={<ImpressumPage />} />

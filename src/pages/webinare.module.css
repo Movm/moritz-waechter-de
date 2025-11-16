@@ -3,55 +3,11 @@
 /* Container and layout */
 .container {
   min-height: 100vh;
-  position: relative;
-}
-
-.backgroundGradient {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background: var(--secondary-50);
 }
 
-:global(html.dark) .backgroundGradient {
+:global(html.dark) .container {
   background: var(--dark-background);
-}
-
-/* Hero Section */
-.heroSection {
-  position: relative;
-  padding: 8rem 1.5rem 4rem 1.5rem;
-}
-
-.heroContainer {
-  max-width: 56rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.heroTitle {
-  font-family: 'Raleway', ui-serif, Georgia, serif;
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #1a1a1a;
-}
-
-:global(html.dark) .heroTitle {
-  color: white;
-}
-
-.heroDescription {
-  font-family: 'Open Sans', ui-sans-serif, system-ui;
-  font-size: 1.25rem;
-  color: #1a1a1a;
-  line-height: 1.75;
-}
-
-:global(html.dark) .heroDescription {
-  color: rgb(209, 213, 219);
 }
 
 /* Webinars Section */
@@ -230,36 +186,24 @@
 
 /* Responsive Design */
 @media (min-width: 640px) {
-  .heroSection {
-    padding: 8rem 2rem 4rem 2rem;
-  }
-  
   .webinarsSection {
     padding: 6rem 2rem 4rem 2rem;
   }
-  
+
   .contactSection {
     padding: 4rem 2rem;
   }
 }
 
 @media (min-width: 768px) {
-  .heroTitle {
-    font-size: 3rem;
-  }
-  
-  .heroDescription {
-    font-size: 1.5rem;
-  }
-  
   .webinarTitle {
     font-size: 2.25rem;
   }
-  
+
   .contactTitle {
     font-size: 2.25rem;
   }
-  
+
   .icon {
     width: 7rem;
     height: 7rem;
@@ -267,29 +211,25 @@
 }
 
 @media (min-width: 1024px) {
-  .heroTitle {
-    font-size: 3.75rem;
-  }
-  
   .webinarItem {
     flex-direction: row;
     gap: 4rem;
   }
-  
+
   .webinarItemReverse {
     flex-direction: row-reverse;
     gap: 4rem;
   }
-  
+
   .iconContainer {
     width: 33.333333%;
   }
-  
+
   .contentContainer {
     width: 66.666667%;
     margin: 0;
   }
-  
+
   .webinarTitle {
     font-size: 2.25rem;
   }

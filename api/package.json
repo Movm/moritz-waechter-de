@@ -1,0 +1,39 @@
+{
+  "name": "moritz-waechter-api",
+  "version": "1.0.0",
+  "description": "Backend API for Moritz Wächter website chat functionality",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test:email": "tsx src/test-email.ts"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "email"
+  ],
+  "author": "Moritz Wächter",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^22.10.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "form-data": "^4.0.4",
+    "mailgun.js": "^12.1.1",
+    "nodemailer": "^6.9.17",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/nodemailer": "^6.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -63,6 +63,12 @@ export const Header: React.FC = () => {
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-3 sm:space-x-4">
               <Link
+                to="/ueber-mich"
+                className="text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
+              >
+                Über mich
+              </Link>
+              <Link
                 to="/projekte"
                 className="text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
               >
@@ -145,6 +151,14 @@ export const Header: React.FC = () => {
                     className="block py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                   >
                     Home
+                  </Link>
+
+                  <Link
+                    to="/ueber-mich"
+                    onClick={closeMenu}
+                    className="block py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                  >
+                    Über mich
                   </Link>
 
                   <Link

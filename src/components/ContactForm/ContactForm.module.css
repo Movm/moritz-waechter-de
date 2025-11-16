@@ -1,0 +1,258 @@
+/* Contact Form Styles */
+
+.form {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Honeypot field - completely hidden from view and screen readers */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Field row - for side-by-side layout on desktop */
+.fieldRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .fieldRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Field group */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Labels */
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+:global(html.dark) .label {
+  color: #e5e5e5;
+}
+
+/* Input fields */
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1a1a1a;
+  background: white;
+  border: 2px solid var(--secondary-200);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+:global(html.dark) .input,
+:global(html.dark) .textarea {
+  background: #333333;
+  color: #e5e5e5;
+  border-color: var(--secondary-600);
+}
+
+/* Remove focus effects for mouse clicks */
+.input:focus,
+.textarea:focus {
+  outline: none;
+}
+
+/* Focus states - only show for keyboard navigation (accessibility) */
+.input:focus-visible,
+.textarea:focus-visible {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px rgba(0, 85, 56, 0.15);
+  outline: none;
+}
+
+:global(html.dark) .input:focus-visible,
+:global(html.dark) .textarea:focus-visible {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px rgba(0, 85, 56, 0.25);
+}
+
+/* Error states */
+.inputError {
+  border-color: #dc2626 !important;
+}
+
+:global(html.dark) .inputError {
+  border-color: #ef4444 !important;
+}
+
+.inputError:focus-visible {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+/* Disabled states */
+.input:disabled,
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--secondary-50);
+}
+
+:global(html.dark) .input:disabled,
+:global(html.dark) .textarea:disabled {
+  background: #2a2a2a;
+}
+
+/* Textarea specific */
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .textarea {
+    min-height: 150px;
+  }
+}
+
+/* Error text */
+.errorText {
+  font-size: 0.875rem;
+  color: #dc2626;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+:global(html.dark) .errorText {
+  color: #ef4444;
+}
+
+/* Submit button */
+.submitButton {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, var(--secondary-600), var(--secondary-700));
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButtonLoading {
+  position: relative;
+}
+
+/* Remove focus outline for mouse clicks, keep for keyboard */
+.submitButton:focus {
+  outline: none;
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid var(--primary-600);
+  outline-offset: 2px;
+}
+
+:global(html.dark) .submitButton:focus-visible {
+  outline-color: var(--primary-400);
+}
+
+/* Success message */
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--secondary-50);
+  border: 2px solid var(--secondary-300);
+  border-radius: 8px;
+  color: var(--primary-700);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+:global(html.dark) .successMessage {
+  background: var(--secondary-900);
+  border-color: var(--secondary-600);
+  color: var(--primary-300);
+}
+
+/* Error message */
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  border-radius: 8px;
+  color: #991b1b;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+:global(html.dark) .errorMessage {
+  background: #3a1a1a;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+/* Message icons */
+.messageIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .form {
+    max-width: 100%;
+  }
+
+  .input,
+  .textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}

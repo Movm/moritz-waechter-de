@@ -1,4 +1,12 @@
 export { Header } from './Header';
 export { Footer } from './Footer';
 export { Layout } from './Layout';
+export { Hero } from './Hero';
 export { ScrollToTop } from './ScrollToTop';
+export { TextMarker } from './TextMarker';
+export { ImageComparison } from './ImageComparison/ImageComparison';
+export { ChatInterface } from './Chat/ChatInterface';
+export { TypingIndicator } from './Chat/TypingIndicator';
+export { WebinarCalendars } from './WebinarBooking/WebinarCalendars';
+export { CalEmbed } from './WebinarBooking/CalEmbed';
+export { ContactForm } from './ContactForm';
