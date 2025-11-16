@@ -131,8 +131,8 @@ export default function Home(): ReactNode {
           <div className={styles.textOnlyContent}>
             <h2 className={styles.multiLineHeading}>
               Tue <strong>gutes</strong>. Und<br />
-              sprich/schreib/twe<br />
-              ete/poste <strong>drüber</strong>.
+              sprich/schreib/<br />
+              tweete/poste <strong>drüber</strong>.
             </h2>
             <p className={styles.imageTextBody}>
               Kommunikation ist Politik. Wer Veränderung will, muss darüber reden – <span className={styles.boldText}>laut, klar und für alle verständlich</span>. Deshalb schreibe ich Texte, gestalte Grafiken und teile Ideen. Denn die beste Idee bringt nichts, wenn sie keiner kennt.

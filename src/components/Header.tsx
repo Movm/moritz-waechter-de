@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiMoon, HiSun, HiMenu, HiX } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,21 +7,9 @@ import { useTheme } from '@/contexts/ThemeContext';
 export const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAtTop, setIsAtTop] = useState(true);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-
-  // Detect scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY > 50;
-      setIsAtTop(!scrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <header className="fixed top-6 right-6 z-50">
@@ -39,9 +27,9 @@ export const Header: React.FC = () => {
               Moritz
             </Link>
 
-            {/* Mobile: Show at top OR when menu is open */}
+            {/* Mobile: Show only when menu is open */}
             <AnimatePresence mode="wait" initial={false}>
-              {(isAtTop || isMenuOpen) && (
+              {isMenuOpen && (
                 <motion.div
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
