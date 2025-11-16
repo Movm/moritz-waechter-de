@@ -67,7 +67,7 @@
 }
 
 .copyButton {
-  composes: standardButton from global;
+  composes: primaryButton from global;
 }
 
 /* Invitation Section */
@@ -327,7 +327,7 @@
 }
 
 .contactButton {
-  composes: standardButtonLink from global;
+  composes: primaryButtonLink from global;
 }
 
 .buttonIcon {

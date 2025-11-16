@@ -3,11 +3,11 @@
 /* Container and layout */
 .container {
   min-height: 100vh;
-  background: var(--secondary-50);
+  background: var(--tertiary-50);
 }
 
 :global(html.dark) .container {
-  background: var(--dark-background);
+  background: var(--primary-950);
 }
 
 /* Webinars Section */
@@ -115,13 +115,13 @@
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--primary-600);
-  background: var(--secondary-100);
+  color: var(--primary-700);
+  background: var(--primary-50);
 }
 
 :global(html.dark) .badge {
-  color: var(--primary-300);
-  background: var(--secondary-700);
+  color: var(--primary-200);
+  background: var(--primary-900);
 }
 
 .webinarDescription {
@@ -137,7 +137,7 @@
 }
 
 .button {
-  composes: standardButtonLink from global;
+  composes: primaryButtonLink from global;
 }
 
 .buttonIcon {
@@ -181,7 +181,7 @@
 }
 
 .contactButton {
-  composes: standardButtonLink from global;
+  composes: primaryButtonLink from global;
 }
 
 /* Responsive Design */

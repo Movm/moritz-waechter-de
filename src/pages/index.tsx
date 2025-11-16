@@ -67,7 +67,7 @@ export default function Home(): ReactNode {
                 <span className={styles.emphasisText}>Aber <strong><TextMarker>Sinnvoll</TextMarker></strong>.</span>
               </h2>
               <p className={styles.imageTextBody}>
-                KI kann vieles – aber nicht alles sollte sie auch tun. Ich nutze künstliche Intelligenz dort, wo sie <span className={styles.boldText}>echten Mehrwert</span> schafft: bei der Erstellung von Grafiken, beim Verfassen von Texten oder bei der Automatisierung repetitiver Aufgaben. Aber immer mit Köpfchen, nicht blind.
+                KI kann vieles – aber nicht alles sollte sie auch tun. Ich nutze künstliche Intelligenz dort, wo sie <span className={styles.boldText}>echten Mehrwert</span> schafft: bei der Erstellung von Grafiken, beim Verfassen von Texten oder bei der Automatisierung repetitiver Aufgaben.
               </p>
             </div>
             <div className={styles.imageColumn}>
@@ -86,10 +86,10 @@ export default function Home(): ReactNode {
           <div className={styles.verticalStackSection}>
             <div className={styles.verticalStackText}>
               <h2 className={styles.imageTextHeading}>
-                Also, <span className={styles.emphasisText}>wirklich <strong><TextMarker>Sinnvoll</TextMarker></strong>.</span>
+                Also, <span className={styles.emphasisText}>wirklich <strong>Sinnvoll</strong>.</span>
               </h2>
               <p className={styles.imageTextBody}>
-                Ich bin der <span className={styles.boldText}>Entwickler des Grünerators</span> – ein KI-Tool, das speziell für grüne Politik gemacht ist. Es verwandelt Stichworte in fertige Texte, verpixelte Bilder in scharfe Grafiken. Das Ergebnis: <span className={styles.boldText}>Weniger Zeitaufwand, mehr politische Wirkung.</span>
+                Ich bin der <span className={styles.boldText}>Entwickler des Grünerators</span> – ein KI-Tool, das ich speziell für die Grünen entwickelt habe. Er erstellt Grüne Texte, begrünt triste Innenstädte und erstellt Untertitel für Reels. Das Ergebnis: <span className={styles.boldText}>Weniger Zeitaufwand, mehr politische Wirkung.</span>
               </p>
             </div>
             <div className={styles.verticalStackImage}>
@@ -112,7 +112,7 @@ export default function Home(): ReactNode {
                 <span className={styles.emphasisText}><strong><TextMarker>mitdenkt</TextMarker></strong>. Alle!</span>
               </h2>
               <p className={styles.imageTextBody}>
-                Gute Politik vergisst niemanden. Ob <span className={styles.boldText}>Klimaschutz, soziale Gerechtigkeit oder Familienpolitik</span> – ich setze mich dafür ein, dass alle gehört werden und alle profitieren. Denn eine Gesellschaft ist nur so stark wie ihr schwächstes Glied.
+                Gute Politik vergisst niemanden. Ob <span className={styles.boldText}>Klimaschutz, soziale Gerechtigkeit oder Familienpolitik</span> – ich setze mich dafür ein, dass alle gehört werden und alle profitieren. Denn eine Gesellschaft ist nur stark, wenn es alle sind.
               </p>
             </div>
             <div className={styles.verticalStackImage}>

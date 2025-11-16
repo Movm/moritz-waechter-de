@@ -8,19 +8,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary Color System ("Tanne" - dark green)
+        // Primary Color System (Phtalo Green)
         primary: {
-          50: '#e8f2ee',
-          100: '#c8dfd5',
-          200: '#a3c9b8',
-          300: '#7db39a',
-          400: '#60a183',
-          500: '#428f6c',
-          600: '#005538', // Base "Tanne" color
-          700: '#004a2f',
-          800: '#003e26',
-          900: '#00321d',
-          950: '#002315',
+          50: '#F0F8F4',
+          100: '#D8F0E6',
+          200: '#B1E0C9', // Jet stream
+          300: '#8AC9B0',
+          400: '#6BAA91',
+          500: '#52907A',
+          600: '#316049', // Base "Deep moss green" color
+          700: '#285040',
+          800: '#1F3F33',
+          900: '#1A332A',
+          950: '#123624', // Phtalo green
         },
         // Secondary Color System ("Eucalyptus" - medium green)
         secondary: {
@@ -36,6 +36,20 @@ export default {
           900: '#1E2A25',
           950: '#0B0F0D',
         },
+        // Tertiary Color System (Warm Cream/Sand)
+        tertiary: {
+          50: '#FDFCFB',
+          100: '#F9F7F4',
+          200: '#F5F1E8',
+          300: '#EFE8DA',
+          400: '#E8DCC8',
+          500: '#DCC9AD',
+          600: '#C9B494',
+          700: '#A89470',
+          800: '#8A7658',
+          900: '#6B5B44',
+          950: '#4A3F2F',
+        },
         dark: {
           DEFAULT: '#2a2a2a',
           darker: '#1e1e1e',
@@ -46,10 +60,10 @@ export default {
         sans: ['Open Sans', 'ui-sans-serif', 'system-ui'],
       },
       backgroundImage: {
-        'gradient-tanne': 'linear-gradient(135deg, #005538 0%, #004a2f 100%)',
-        'gradient-tanne-dark': 'linear-gradient(135deg, #003e26 0%, #00321d 100%)',
-        'gradient-accent': 'linear-gradient(to right, #428f6c 0%, #005538 100%)',
-        'gradient-accent-dark': 'linear-gradient(to right, #60a183 0%, #005538 100%)',
+        'gradient-phtalo': 'linear-gradient(135deg, #316049 0%, #1F3F33 100%)',
+        'gradient-phtalo-dark': 'linear-gradient(135deg, #1A332A 0%, #123624 100%)',
+        'gradient-accent': 'linear-gradient(to right, #52907A 0%, #285040 100%)',
+        'gradient-accent-dark': 'linear-gradient(to right, #8AC9B0 0%, #52907A 100%)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

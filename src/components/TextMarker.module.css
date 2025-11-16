@@ -13,14 +13,13 @@
   left: -0.05em;
   right: -0.05em;
   height: 0.6em;
-  background-color: var(--marker-color, var(--secondary-300));
+  background-color: var(--marker-color);
   border-radius: 3px;
   z-index: -1;
   opacity: 0.7;
 }
 
-/* Dark mode adjustment */
+/* Dark mode adjustment - slightly more visible */
 :global(html.dark) .textMarker::before {
-  background-color: var(--marker-color, var(--secondary-600));
-  opacity: 0.4;
+  opacity: 0.5;
 }

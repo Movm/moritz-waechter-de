@@ -2,7 +2,7 @@
 
 /* Hero Section */
 .heroSection {
-  background: var(--secondary-50);
+  background: var(--primary-50);
   min-height: 50vh;
   display: flex;
   align-items: center;

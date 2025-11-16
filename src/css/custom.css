@@ -10,18 +10,18 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  /* Primary Color System ("Tanne") - Primary digital interaction color */
-  --primary-50: #e8f2ee;
-  --primary-100: #c8dfd5;
-  --primary-200: #a3c9b8;
-  --primary-300: #7db39a;
-  --primary-400: #60a183;
-  --primary-500: #428f6c;
-  --primary-600: #005538;  /* Base "Tanne" color */
-  --primary-700: #004a2f;
-  --primary-800: #003e26;
-  --primary-900: #00321d;
-  --primary-950: #002315;
+  /* Primary Color System (Phtalo Green) - Primary digital interaction color */
+  --primary-50: #F0F8F4;
+  --primary-100: #D8F0E6;
+  --primary-200: #B1E0C9;  /* Jet stream */
+  --primary-300: #8AC9B0;
+  --primary-400: #6BAA91;
+  --primary-500: #52907A;
+  --primary-600: #316049;  /* Base "Deep moss green" color */
+  --primary-700: #285040;
+  --primary-800: #1F3F33;
+  --primary-900: #1A332A;
+  --primary-950: #123624;  /* Phtalo green */
 
   /* Secondary Color System ("Eucalyptus") */
   --secondary-50: #F0F4F3;
@@ -35,6 +35,19 @@
   --secondary-800: #31453C;
   --secondary-900: #1E2A25;
   --secondary-950: #0B0F0D;
+
+  /* Tertiary Color System (Warm Cream/Sand) - Accent and backgrounds */
+  --tertiary-50: #FDFCFB;
+  --tertiary-100: #F9F7F4;
+  --tertiary-200: #F5F1E8;
+  --tertiary-300: #EFE8DA;
+  --tertiary-400: #E8DCC8;
+  --tertiary-500: #DCC9AD;
+  --tertiary-600: #C9B494;
+  --tertiary-700: #A89470;
+  --tertiary-800: #8A7658;
+  --tertiary-900: #6B5B44;
+  --tertiary-950: #4A3F2F;
 
   /* Dark mode background */
   --dark-background: #2a2a2a;
@@ -50,12 +63,25 @@
   --ifm-color-primary-lightest: var(--primary-300);
 
   /* Semantic color names */
-  --color-accent: var(--secondary-100);
-  --color-secondary: var(--secondary-600);
+  --color-accent: var(--tertiary-200);  /* Warm cream for subtle backgrounds */
+  --color-secondary: var(--secondary-600);  /* Eucalyptus for supporting elements */
+  --color-tertiary: var(--tertiary-400);  /* Warmer accent for cards/highlights */
 
-  /* Gradients using tanne and eucalyptus */
-  --background-gradient: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
-  --accent-gradient: linear-gradient(to right, var(--primary-500) 0%, var(--primary-600) 100%);
+  /* Gradients using phtalo greens */
+  --background-gradient: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+  --accent-gradient: linear-gradient(to right, var(--primary-500) 0%, var(--primary-700) 100%);
+
+  /* Usage guide:
+   * Primary (Phtalo): Headers, CTAs, navigation, primary buttons, links
+   * Secondary (Eucalyptus): Subheadings, borders, secondary buttons, icons
+   * Tertiary (Cream): Card backgrounds, hover states, subtle accents, alternating sections
+   */
+
+  /* Semantic text colors */
+  --text-primary: #1a1a1a;
+  --text-heading: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6b6b6b;
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -70,22 +96,29 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  /* Primary color mapped to lighter tanne tones for dark mode */
-  --ifm-color-primary: var(--primary-400);
-  --ifm-color-primary-dark: var(--primary-500);
-  --ifm-color-primary-darker: var(--primary-600);
-  --ifm-color-primary-darkest: var(--primary-700);
-  --ifm-color-primary-light: var(--primary-300);
-  --ifm-color-primary-lighter: var(--primary-200);
-  --ifm-color-primary-lightest: var(--primary-100);
+  /* Primary color mapped to lighter phtalo tones for dark mode */
+  --ifm-color-primary: var(--primary-300);
+  --ifm-color-primary-dark: var(--primary-400);
+  --ifm-color-primary-darker: var(--primary-500);
+  --ifm-color-primary-darkest: var(--primary-600);
+  --ifm-color-primary-light: var(--primary-200);
+  --ifm-color-primary-lighter: var(--primary-100);
+  --ifm-color-primary-lightest: var(--primary-50);
 
   /* Semantic colors for dark mode */
-  --color-accent: var(--secondary-200);
-  --color-secondary: var(--secondary-500);
+  --color-accent: var(--tertiary-800);  /* Darker cream for dark mode backgrounds */
+  --color-secondary: var(--secondary-400);  /* Lighter eucalyptus for visibility */
+  --color-tertiary: var(--tertiary-700);  /* Muted warm accent */
 
   /* Gradients for dark mode */
-  --background-gradient: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-900) 100%);
-  --accent-gradient: linear-gradient(to right, var(--primary-400) 0%, var(--primary-600) 100%);
+  --background-gradient: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-950) 100%);
+  --accent-gradient: linear-gradient(to right, var(--primary-300) 0%, var(--primary-500) 100%);
+
+  /* Semantic text colors for dark mode */
+  --text-primary: #e5e5e5;
+  --text-heading: #e5e5e5;
+  --text-secondary: #b5b5b5;
+  --text-muted: #8a8a8a;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
