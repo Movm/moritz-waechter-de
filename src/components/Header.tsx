@@ -164,6 +164,19 @@ export const Header: React.FC = () => {
                   >
                     Webinare
                   </Link>
+
+                  {/* Mobile Theme Toggle */}
+                  <button
+                    onClick={toggleTheme}
+                    className="py-2 hover:scale-110 active:scale-95 transition-transform duration-200 ease-in-out"
+                    aria-label="Toggle dark mode"
+                  >
+                    {theme === 'dark' ? (
+                      <HiSun className="w-5 h-5 text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors duration-200" />
+                    ) : (
+                      <HiMoon className="w-5 h-5 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200" />
+                    )}
+                  </button>
                 </div>
               </div>
             </motion.div>
