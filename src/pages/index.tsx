@@ -130,9 +130,7 @@ export default function Home(): ReactNode {
         <Section className={`${styles.imageTextSection} ${styles.lastSection}`}>
           <div className={styles.textOnlyContent}>
             <h2 className={styles.multiLineHeading}>
-              Tue <strong>gutes</strong>. Und<br />
-              sprich/schreib/<br />
-              tweete/poste drüber.
+              Tue <strong>gutes</strong>. Und sprich/schreib/poste/tweete darüber.
             </h2>
             <p className={styles.imageTextBody}>
               Kommunikation ist Politik. Wer Veränderung will, muss darüber reden – <span className={styles.boldText}>laut, klar und für alle verständlich</span>. Deshalb schreibe ich Texte, gestalte Grafiken und teile Ideen. Denn die beste Idee bringt nichts, wenn sie keiner kennt.
