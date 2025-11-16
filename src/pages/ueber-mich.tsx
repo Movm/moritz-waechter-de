@@ -38,16 +38,16 @@ export default function UeberMich(): ReactNode {
         <Hero
           title="Über mich"
           markedWord="mich"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+          subtitle="Ich bin Moritz. Ich studiere, mache Politik bei den Grünen und bin überzeugt: Veränderung beginnt vor Ort."
           image="/img/portrait-politics.jpg"
           imageAlt="Moritz Wächter"
         />
 
-        {/* Facts Section */}
-        <Section className={styles.factsSection}>
-          <div className={styles.factsContent}>
-            <h2 className={styles.sectionHeading}>Facts</h2>
-            <div className={styles.factsText}>
+        {/* Content Section */}
+        <Section className={styles.contentSection}>
+          <div className={styles.contentGrid}>
+            <div className={styles.contentText}>
+              <h3>Facts</h3>
               <p>
                 Ich bin Student, 1997 geboren und lebe in Alfter im Rhein-Sieg-Kreis.
                 Ich liebe Politik und Kommunikation. Ich bin in Detmold im Kreis Lippe geboren.
@@ -61,15 +61,8 @@ export default function UeberMich(): ReactNode {
                   höchste Statue
                 </a> Deutschlands.
               </p>
-            </div>
-          </div>
-        </Section>
 
-        {/* Beruf Section */}
-        <Section className={styles.infoSection}>
-          <div className={styles.infoContent}>
-            <h2 className={styles.sectionHeading}>Beruf</h2>
-            <div className={styles.infoText}>
+              <h3>Beruf</h3>
               <p>
                 Ich studiere Politikwissenschaften an der Rheinischen Friedrich-Wilhelms-Universität
                 und bin nebenberuflich bei der bpb sowie Martin Metz, MdL. Vorher habe ich drei Jahre
@@ -85,34 +78,20 @@ export default function UeberMich(): ReactNode {
                   LinkedIn
                 </a>.
               </p>
-            </div>
-          </div>
-        </Section>
 
-        {/* Politik Section */}
-        <Section className={styles.factsSection}>
-          <div className={styles.factsContent}>
-            <h2 className={styles.sectionHeading}>Politik</h2>
-            <div className={styles.factsText}>
+              <h3>Politik</h3>
               <p>
                 Ich bin Mitglied der Grünen Jugend und Kreisvorsitzender der Grünen im Rhein-Sieg-Kreis.
                 Mein Herz schlägt für Sozial- und Familienpolitik, aber seit ich bei den Grünen bin
                 kämpfe ich auch für Umwelt- und Klimaschutz.
               </p>
-            </div>
-          </div>
-        </Section>
 
-        {/* Medien Section */}
-        <Section className={styles.infoSection}>
-          <div className={styles.infoContent}>
-            <h2 className={styles.sectionHeading}>Medien</h2>
-            <div className={styles.infoText}>
+              <h3>Medien</h3>
               <p>
                 In meiner Freizeit mache ich Grafik- und Webdesign, unter anderem diese kleine Seite.
                 Wenn ich mal richtig viel Zeit habe, schreibe ich Texte. Häufiger{' '}
                 <a
-                  href="https://twitter.com/moritz_waechter"
+                  href="https://x.com/MoritzWaech"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.textLink}
