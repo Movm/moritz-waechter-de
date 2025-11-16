@@ -65,6 +65,15 @@
     /* Gradients using phtalo greens */
     --background-gradient: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
     --accent-gradient: linear-gradient(to right, var(--primary-500) 0%, var(--primary-700) 100%);
+
+    /* Semantic background colors - auto-switch for light/dark mode */
+    --bg-page: var(--tertiary-50);         /* Main page canvas */
+    --bg-section: white;                   /* Section backgrounds */
+    --bg-section-alt: var(--tertiary-100); /* Alternate sections */
+    --bg-accent: var(--primary-50);        /* Accent bars/highlights */
+    --bg-card: white;                      /* Cards, inputs, forms */
+    --bg-hover-subtle: var(--primary-50);  /* Subtle hover states */
+    --bg-footer: #000;                     /* Footer background */
   }
 
   .dark {
@@ -82,6 +91,15 @@
     /* Gradients for dark mode */
     --background-gradient: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-950) 100%);
     --accent-gradient: linear-gradient(to right, var(--primary-300) 0%, var(--primary-500) 100%);
+
+    /* Semantic background colors for dark mode - anthracite theme */
+    --bg-page: #1a1a1a;                    /* Main page canvas */
+    --bg-section: #2a2a2a;                 /* Section backgrounds */
+    --bg-section-alt: #2a2a2a;             /* Alternate sections */
+    --bg-accent: #2a2a2a;                  /* Accent bars/highlights */
+    --bg-card: #2a2a2a;                    /* Cards, inputs, forms */
+    --bg-hover-subtle: rgba(107, 170, 145, 0.1); /* Subtle hover states */
+    --bg-footer: #1a1a1a;                  /* Footer background */
   }
 
   body {

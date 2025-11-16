@@ -667,7 +667,7 @@
 }
 
 .verticalStackText {
-  max-width: 800px;
+  max-width: 1100px;
   margin-left: 0;
 }
 
@@ -680,12 +680,14 @@
 @media (min-width: 1280px) {
   .verticalStackText {
     margin-left: 5rem;
+    max-width: 1200px;
   }
 }
 
 @media (min-width: 1536px) {
   .verticalStackText {
     margin-left: 6rem;
+    max-width: 1300px;
   }
 }
 
