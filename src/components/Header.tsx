@@ -12,17 +12,17 @@ export const Header: React.FC = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="fixed top-6 right-6 z-50">
+    <header className="fixed top-6 right-6 xl:top-8 xl:right-8 2xl:top-10 2xl:right-10 z-50">
       <nav className="bg-white/10 dark:bg-gray-900/20 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl shadow-lg overflow-hidden">
         {/* Header Top Section */}
-        <div className="flex items-center justify-between gap-x-2 md:gap-x-6 pl-1 pr-3 md:px-6 py-3">
-          <div className="flex items-center space-x-4 sm:space-x-6">
+        <div className="flex items-center justify-between gap-x-2 md:gap-x-6 xl:gap-x-8 2xl:gap-x-10 pl-1 pr-3 md:px-6 xl:px-8 2xl:px-10 py-3">
+          <div className="flex items-center space-x-4 sm:space-x-6 xl:space-x-8 2xl:space-x-10">
             {/* Logo / Title - Always visible on desktop, conditional on mobile based on scroll */}
             {/* Desktop: Always show */}
             <Link
               to="/"
               onClick={closeMenu}
-              className="hidden md:block font-display font-bold text-sm sm:text-base text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 whitespace-nowrap"
+              className="hidden md:block font-display font-bold text-sm sm:text-base xl:text-lg 2xl:text-xl text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 whitespace-nowrap"
             >
               Moritz
             </Link>
@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
                   <Link
                     to="/"
                     onClick={closeMenu}
-                    className="font-display font-bold text-base text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 whitespace-nowrap"
+                    className="font-display font-bold text-base xl:text-lg 2xl:text-xl text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 whitespace-nowrap"
                   >
                     Moritz
                   </Link>
@@ -49,22 +49,22 @@ export const Header: React.FC = () => {
             </AnimatePresence>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center space-x-3 sm:space-x-4">
+            <div className="hidden md:flex items-center space-x-3 sm:space-x-4 xl:space-x-6 2xl:space-x-8">
               <Link
                 to="/ueber-mich"
-                className="text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 Über mich
               </Link>
               <Link
                 to="/projekte"
-                className="text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 Grünerator
               </Link>
               <Link
                 to="/webinare"
-                className="text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 Webinare
               </Link>
@@ -77,9 +77,9 @@ export const Header: React.FC = () => {
               aria-label="Toggle dark mode"
             >
               {theme === 'dark' ? (
-                <HiSun className="w-5 h-5 text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors duration-200" />
+                <HiSun className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors duration-200" />
               ) : (
-                <HiMoon className="w-5 h-5 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200" />
+                <HiMoon className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200" />
               )}
             </button>
           </div>
@@ -100,7 +100,7 @@ export const Header: React.FC = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.1 }}
                 >
-                  <HiX className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <HiX className="w-6 h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 text-primary-600 dark:text-primary-400" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -110,7 +110,7 @@ export const Header: React.FC = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.1 }}
                 >
-                  <HiMenu className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <HiMenu className="w-6 h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 text-primary-600 dark:text-primary-400" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -136,7 +136,7 @@ export const Header: React.FC = () => {
                   <Link
                     to="/"
                     onClick={closeMenu}
-                    className="block py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                    className="block py-2 text-sm xl:text-base 2xl:text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                   >
                     Home
                   </Link>
@@ -144,7 +144,7 @@ export const Header: React.FC = () => {
                   <Link
                     to="/ueber-mich"
                     onClick={closeMenu}
-                    className="block py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                    className="block py-2 text-sm xl:text-base 2xl:text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                   >
                     Über mich
                   </Link>
@@ -152,7 +152,7 @@ export const Header: React.FC = () => {
                   <Link
                     to="/projekte"
                     onClick={closeMenu}
-                    className="block py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                    className="block py-2 text-sm xl:text-base 2xl:text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                   >
                     Grünerator
                   </Link>
@@ -160,7 +160,7 @@ export const Header: React.FC = () => {
                   <Link
                     to="/webinare"
                     onClick={closeMenu}
-                    className="block py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                    className="block py-2 text-sm xl:text-base 2xl:text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                   >
                     Webinare
                   </Link>
@@ -172,9 +172,9 @@ export const Header: React.FC = () => {
                     aria-label="Toggle dark mode"
                   >
                     {theme === 'dark' ? (
-                      <HiSun className="w-5 h-5 text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors duration-200" />
+                      <HiSun className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors duration-200" />
                     ) : (
-                      <HiMoon className="w-5 h-5 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200" />
+                      <HiMoon className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200" />
                     )}
                   </button>
                 </div>
