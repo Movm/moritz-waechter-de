@@ -3,19 +3,43 @@
 
 # Production
 /build
+/dist
 
 # Generated files
 .docusaurus
 .cache-loader
 
-# Misc
+# MCP and Development Tools
+.playwright-mcp/
+.claude/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Test Coverage
+coverage/
+.nyc_output/
+
+# Environment variables
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -28,4 +52,11 @@ static/**/.DS_Store
 CLAUDE.md
 DESIGN_GUIDELINES.md
 STYLE_GUIDE.md
+CHAT_IMPLEMENTATION.md
+
+# Design Files
+*.png.backup
+Homeüage_new_design.png
+
+# Backups
 *.backup
