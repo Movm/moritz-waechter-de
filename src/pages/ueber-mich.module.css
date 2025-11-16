@@ -37,8 +37,22 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .factsContent {
+    max-width: 1400px;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .factsContent {
+    max-width: 1536px;
+    gap: 6rem;
+  }
+}
+
 .sectionHeading {
-  font-size: 2.75rem;
+  font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
   font-weight: 900;
   font-style: italic;
   color: #1a1a1a;
@@ -64,7 +78,6 @@
 
 @media (min-width: 768px) {
   .sectionHeading {
-    font-size: 3.25rem;
     text-align: center;
     margin: 0 auto 1.5rem auto;
   }
@@ -80,7 +93,7 @@
 }
 
 .factsText p {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   line-height: 1.8;
   color: #1a1a1a;
   margin: 0;
@@ -88,12 +101,6 @@
 
 :global(html.dark) .factsText p {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .factsText p {
-    font-size: 1.25rem;
-  }
 }
 
 .textLink {
@@ -138,12 +145,26 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .infoContent {
+    max-width: 1400px;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .infoContent {
+    max-width: 1536px;
+    gap: 6rem;
+  }
+}
+
 .infoText {
   padding-top: 0.5rem;
 }
 
 .infoText p {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   line-height: 1.8;
   color: #1a1a1a;
   margin: 0;
@@ -151,10 +172,4 @@
 
 :global(html.dark) .infoText p {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .infoText p {
-    font-size: 1.25rem;
-  }
 }

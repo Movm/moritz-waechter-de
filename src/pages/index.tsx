@@ -64,7 +64,7 @@ export default function Home(): ReactNode {
             <div className={styles.textColumn}>
               <h2 className={styles.imageTextHeading}>
                 Künstliche Intelligenz.{' '}
-                <span className={styles.emphasisText}>Aber <TextMarker>Sinnvoll</TextMarker>.</span>
+                <span className={styles.emphasisText}>Aber <strong><TextMarker>Sinnvoll</TextMarker></strong>.</span>
               </h2>
               <p className={styles.imageTextBody}>
                 KI kann vieles – aber nicht alles sollte sie auch tun. Ich nutze künstliche Intelligenz dort, wo sie <span className={styles.boldText}>echten Mehrwert</span> schafft: bei der Erstellung von Grafiken, beim Verfassen von Texten oder bei der Automatisierung repetitiver Aufgaben. Aber immer mit Köpfchen, nicht blind.
@@ -77,8 +77,8 @@ export default function Home(): ReactNode {
                 className={styles.sectionImage}
               />
             </div>
-            <div className={styles.bottomAccentBar}></div>
           </div>
+          <div className={styles.bottomAccentBar}></div>
         </Section>
 
         {/* Section 2: Also, wirklich Sinnvoll */}
@@ -86,7 +86,7 @@ export default function Home(): ReactNode {
           <div className={styles.verticalStackSection}>
             <div className={styles.verticalStackText}>
               <h2 className={styles.imageTextHeading}>
-                Also, <span className={styles.emphasisText}>wirklich <TextMarker>Sinnvoll</TextMarker>.</span>
+                Also, <span className={styles.emphasisText}>wirklich <strong><TextMarker>Sinnvoll</TextMarker></strong>.</span>
               </h2>
               <p className={styles.imageTextBody}>
                 Ich bin der <span className={styles.boldText}>Entwickler des Grünerators</span> – ein KI-Tool, das speziell für grüne Politik gemacht ist. Es verwandelt Stichworte in fertige Texte, verpixelte Bilder in scharfe Grafiken. Das Ergebnis: <span className={styles.boldText}>Weniger Zeitaufwand, mehr politische Wirkung.</span>
@@ -109,7 +109,7 @@ export default function Home(): ReactNode {
             <div className={styles.verticalStackText}>
               <h2 className={styles.imageTextHeading}>
                 Für eine Politik, die alle{' '}
-                <span className={styles.emphasisText}><TextMarker>mitdenkt</TextMarker>. Alle!</span>
+                <span className={styles.emphasisText}><strong><TextMarker>mitdenkt</TextMarker></strong>. Alle!</span>
               </h2>
               <p className={styles.imageTextBody}>
                 Gute Politik vergisst niemanden. Ob <span className={styles.boldText}>Klimaschutz, soziale Gerechtigkeit oder Familienpolitik</span> – ich setze mich dafür ein, dass alle gehört werden und alle profitieren. Denn eine Gesellschaft ist nur so stark wie ihr schwächstes Glied.
@@ -119,11 +119,11 @@ export default function Home(): ReactNode {
               <img
                 src="/img/portrait-politics.jpg"
                 alt="Portrait of Moritz Wächter"
-                className={styles.sectionImage}
+                className={`${styles.sectionImage} ${styles.sectionImageOriginal}`}
               />
             </div>
-            <div className={styles.rightAccentBar}></div>
           </div>
+          <div className={styles.rightAccentBar}></div>
         </Section>
 
         {/* Section 4: Tue gutes */}
@@ -132,7 +132,7 @@ export default function Home(): ReactNode {
             <h2 className={styles.multiLineHeading}>
               Tue <strong>gutes</strong>. Und<br />
               sprich/schreib/<br />
-              tweete/poste <strong>drüber</strong>.
+              tweete/poste drüber.
             </h2>
             <p className={styles.imageTextBody}>
               Kommunikation ist Politik. Wer Veränderung will, muss darüber reden – <span className={styles.boldText}>laut, klar und für alle verständlich</span>. Deshalb schreibe ich Texte, gestalte Grafiken und teile Ideen. Denn die beste Idee bringt nichts, wenn sie keiner kennt.

@@ -21,12 +21,24 @@
 }
 
 .contentGrid {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+@media (min-width: 1280px) {
+  .contentGrid {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .contentGrid {
+    max-width: 1536px;
+  }
+}
+
 .sectionHeading {
-  font-size: 2.75rem;
+  font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
   font-weight: 900;
   font-style: italic;
   color: #1a1a1a;
@@ -52,7 +64,6 @@
 
 @media (min-width: 768px) {
   .sectionHeading {
-    font-size: 3.25rem;
     text-align: center;
     margin: 0 auto 1.5rem auto;
   }
@@ -65,10 +76,17 @@
 
 .contentText {
   padding-top: 0.5rem;
+  max-width: 800px;
+}
+
+@media (min-width: 768px) {
+  .contentText {
+    margin: 0 auto;
+  }
 }
 
 .contentText p {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   line-height: 1.8;
   color: #1a1a1a;
   margin: 0 0 1rem 0;
@@ -76,12 +94,6 @@
 
 :global(html.dark) .contentText p {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .contentText p {
-    font-size: 1.25rem;
-  }
 }
 
 .sectionImage {
@@ -94,7 +106,7 @@
 }
 
 .contentText h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.25rem + 0.75vw, 2rem);
   font-weight: 700;
   color: #1a1a1a;
   margin: 2.5rem 0 1rem 0;
@@ -107,12 +119,6 @@
 
 :global(html.dark) .contentText h3 {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .contentText h3 {
-    font-size: 1.75rem;
-  }
 }
 
 .textLink {

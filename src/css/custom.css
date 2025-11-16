@@ -60,6 +60,12 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Open Sans', ui-sans-serif, system-ui;
+
+  /* Responsive spacing system */
+  --space-section-y: 4rem;
+  --space-section-x: 1.5rem;
+  --space-grid-gap: 2rem;
+  --space-content-gap: 1rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -82,6 +88,34 @@
   --accent-gradient: linear-gradient(to right, var(--primary-400) 0%, var(--primary-600) 100%);
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive spacing breakpoints */
+@media (min-width: 768px) {
+  :root {
+    --space-section-y: 6rem;
+    --space-section-x: 2rem;
+    --space-grid-gap: 4rem;
+    --space-content-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --space-section-y: 8rem;
+    --space-section-x: 3rem;
+    --space-grid-gap: 5rem;
+    --space-content-gap: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --space-section-y: 10rem;
+    --space-section-x: 4rem;
+    --space-grid-gap: 6rem;
+    --space-content-gap: 2.5rem;
+  }
 }
 
 /* Ensure core Docusaurus functionality isn't broken by Tailwind */

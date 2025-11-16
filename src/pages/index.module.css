@@ -43,6 +43,20 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .heroContent {
+    max-width: 1400px;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .heroContent {
+    max-width: 1536px;
+    gap: 6rem;
+  }
+}
+
 /* Hero Image */
 .heroImage {
   display: flex;
@@ -99,7 +113,7 @@
 }
 
 .mainHeading {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 1.5rem + 3vw, 5rem);
   font-weight: 900;
   font-style: italic;
   color: #1a1a1a;
@@ -109,18 +123,6 @@
 
 :global(html.dark) .mainHeading {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .mainHeading {
-    font-size: 3.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .mainHeading {
-    font-size: 4.5rem;
-  }
 }
 
 .headingBrand {
@@ -159,8 +161,22 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .factsContent {
+    max-width: 1400px;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .factsContent {
+    max-width: 1536px;
+    gap: 6rem;
+  }
+}
+
 .sectionHeading {
-  font-size: 2.75rem;
+  font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
   font-weight: 900;
   font-style: italic;
   color: #1a1a1a;
@@ -186,7 +202,6 @@
 
 @media (min-width: 768px) {
   .sectionHeading {
-    font-size: 3.25rem;
     text-align: center;
     margin: 0 auto 1.5rem auto;
   }
@@ -202,7 +217,7 @@
 }
 
 .factsText p {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   line-height: 1.8;
   color: #1a1a1a;
   margin: 0;
@@ -210,12 +225,6 @@
 
 :global(html.dark) .factsText p {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .factsText p {
-    font-size: 1.25rem;
-  }
 }
 
 .textLink {
@@ -260,12 +269,26 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .infoContent {
+    max-width: 1400px;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .infoContent {
+    max-width: 1536px;
+    gap: 6rem;
+  }
+}
+
 .infoText {
   padding-top: 0.5rem;
 }
 
 .infoText p {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   line-height: 1.8;
   color: #1a1a1a;
   margin: 0;
@@ -273,12 +296,6 @@
 
 :global(html.dark) .infoText p {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .infoText p {
-    font-size: 1.25rem;
-  }
 }
 
 /* Contact Section */
@@ -301,7 +318,7 @@
 }
 
 .contactHeading {
-  font-size: 2rem;
+  font-size: clamp(2rem, 1.2rem + 2vw, 3.5rem);
   font-weight: 900;
   font-style: italic;
   color: #1a1a1a;
@@ -311,12 +328,6 @@
 
 :global(html.dark) .contactHeading {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .contactHeading {
-    font-size: 3.25rem;
-  }
 }
 
 /* Alternative contact text */
@@ -411,7 +422,26 @@
 
 /* Image-Text Sections for Homepage Redesign */
 .imageTextSection {
-  padding: 4rem 2rem 0 2rem;
+  padding: 2rem 2rem 4rem 2rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .imageTextSection {
+    padding: 3rem 2rem 8rem 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .imageTextSection {
+    padding: 3rem 3rem 8rem 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .imageTextSection {
+    padding: 4rem 4rem 10rem 4rem;
+  }
 }
 
 .lastSection {
@@ -421,7 +451,6 @@
 /* White Background Section */
 .whiteBackground {
   background: white;
-  padding-bottom: 0;
   margin-bottom: 0;
 }
 
@@ -436,7 +465,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;
+  width: min(100vw, 1920px);
   height: 36px;
   background: var(--secondary-100);
   z-index: 0;
@@ -458,7 +487,7 @@
   position: absolute;
   top: -4rem;
   right: -2rem;
-  width: calc(10vw + 2rem);
+  width: min(calc(10vw + 2rem), 250px);
   height: calc(100% + 4rem);
   background: var(--secondary-100);
   z-index: 0;
@@ -514,12 +543,27 @@
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
   .imageTextGrid {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .imageTextGrid {
+    max-width: 1400px;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .imageTextGrid {
+    max-width: 1536px;
+    gap: 6rem;
   }
 }
 
@@ -538,24 +582,23 @@
 .imageColumn {
   position: relative;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .sectionImage {
   width: 100%;
   height: auto;
-  min-height: 300px;
-  max-height: 500px;
+  aspect-ratio: 9 / 16;
   object-fit: cover;
   border-radius: 12px;
   display: block;
+  max-height: clamp(400px, 50vh, 800px);
 }
 
-@media (min-width: 768px) {
-  .sectionImage {
-    min-height: 400px;
-    max-height: 600px;
-  }
+/* Image with original aspect ratio */
+.sectionImageOriginal {
+  aspect-ratio: auto;
+  max-height: none;
 }
 
 /* Play button overlay */
@@ -592,18 +635,32 @@
 /* Text column styling */
 .textColumn {
   padding: 1rem 0;
-  margin-left: 4rem;
+  margin-left: 0;
+  position: relative;
+  z-index: 2;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .textColumn {
-    margin-left: 0;
+    margin-left: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .textColumn {
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .textColumn {
+    margin-left: 6rem;
   }
 }
 
 .imageTextHeading {
-  font-size: 1.75rem;
-  font-weight: 900;
+  font-size: clamp(1.75rem, 1rem + 2.5vw, 3.75rem);
+  font-weight: 400;
   font-style: normal;
   color: #1a1a1a;
   line-height: 1.3;
@@ -614,16 +671,8 @@
   color: #e5e5e5;
 }
 
-@media (min-width: 768px) {
-  .imageTextHeading {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .imageTextHeading {
-    font-size: 3.5rem;
-  }
+.imageTextHeading strong {
+  font-weight: 900;
 }
 
 .emphasisText {
@@ -632,7 +681,7 @@
 }
 
 .imageTextBody {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   line-height: 1.8;
   color: #1a1a1a;
   margin: 0;
@@ -640,12 +689,6 @@
 
 :global(html.dark) .imageTextBody {
   color: #e5e5e5;
-}
-
-@media (min-width: 768px) {
-  .imageTextBody {
-    font-size: 1.25rem;
-  }
 }
 
 .boldText {
@@ -662,14 +705,38 @@
   gap: 2rem;
 }
 
-.verticalStackText {
-  max-width: 800px;
-  margin-left: 4rem;
+@media (min-width: 1280px) {
+  .verticalStackSection {
+    max-width: 1400px;
+  }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1536px) {
+  .verticalStackSection {
+    max-width: 1536px;
+  }
+}
+
+.verticalStackText {
+  max-width: 800px;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
   .verticalStackText {
-    margin-left: 0;
+    margin-left: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .verticalStackText {
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .verticalStackText {
+    margin-left: 6rem;
   }
 }
 
@@ -691,12 +758,24 @@
 }
 
 .textOnlyContent {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+@media (min-width: 1280px) {
+  .textOnlyContent {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .textOnlyContent {
+    max-width: 1536px;
+  }
+}
+
 .multiLineHeading {
-  font-size: 2rem;
+  font-size: clamp(2rem, 0.75rem + 4vw, 5.5rem);
   font-weight: 400;
   font-style: normal;
   color: #1a1a1a;
@@ -717,16 +796,4 @@
 
 .multiLineHeading strong {
   font-weight: 900;
-}
-
-@media (min-width: 768px) {
-  .multiLineHeading {
-    font-size: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .multiLineHeading {
-    font-size: 5rem;
-  }
 }
