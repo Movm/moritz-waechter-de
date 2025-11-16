@@ -108,8 +108,8 @@ export default function Home(): ReactNode {
           <div className={styles.verticalStackSection}>
             <div className={styles.verticalStackText}>
               <h2 className={styles.imageTextHeading}>
-                Für eine Politik, die alle{' '}
-                <span className={styles.emphasisText}><strong><TextMarker>mitdenkt</TextMarker></strong>.</span>
+                Für eine Politik, die{' '}
+                <span className={styles.emphasisText}>alle <strong><TextMarker>mitdenkt</TextMarker></strong>.</span>
               </h2>
               <p className={styles.imageTextBody}>
                 Gute Politik vergisst niemanden. Ob <span className={styles.boldText}>Klimaschutz, soziale Gerechtigkeit oder Familienpolitik</span> – ich setze mich dafür ein, dass alle gehört werden und alle profitieren. Denn eine Gesellschaft ist nur stark, wenn es alle sind.
