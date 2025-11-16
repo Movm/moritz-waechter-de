@@ -231,15 +231,6 @@ The project uses a custom **eucalyptus** color palette with two main colors:
 
 Both colors have 11-stop scales (50-950) defined as Tailwind utilities and CSS variables for consistent theming across light and dark modes.
 
-See [DESIGN_GUIDELINES.md](DESIGN_GUIDELINES.md) and [STYLE_GUIDE.md](STYLE_GUIDE.md) for complete design system documentation.
-
-## Documentation
-
-- **[CLAUDE.md](CLAUDE.md)** - Development guidelines for AI assistants (architecture, tech stack, conventions)
-- **[DESIGN_GUIDELINES.md](DESIGN_GUIDELINES.md)** - Color system, gradients, and semantic color usage
-- **[STYLE_GUIDE.md](STYLE_GUIDE.md)** - Comprehensive styling rules and patterns
-- **[CHAT_IMPLEMENTATION.md](CHAT_IMPLEMENTATION.md)** - Chat feature documentation
-
 ## Key Features in Detail
 
 ### Grünerator AI Tool
