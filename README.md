@@ -6,15 +6,11 @@ A cutting-edge personal website built with React 19, Vite, and TypeScript, featu
 
 ## Features
 
-- **🎨 Modern Design System**: Custom eucalyptus color palette with dark/light theme support and smooth transitions
-- **🤖 Grünerator AI Showcase**: Dedicated project page featuring the Grünerator AI tool with interactive before/after image comparison
-- **📅 Webinar Platform**: Integrated Cal.com booking system for three educational tracks (KI Basics, Grünerator Basics/Advanced)
-- **📝 Contact Form**: React Hook Form with Zod validation, honeypot spam protection, and Mailgun email integration
-- **📄 MDX Content**: Dynamic webinar invitation pages rendered from Markdown with frontmatter support
-- **⚡ Performance Optimized**: Code splitting, lazy loading, image optimization, and production sourcemaps
-- **🌍 German Market Ready**: Complete German content with required legal pages (Impressum, Datenschutz/GDPR)
-- **🎭 Rich Animations**: Framer Motion page transitions, scroll effects, and micro-interactions
-- **📱 Fully Responsive**: Mobile-first design with animated hamburger menu and optimized layouts
+- Grünerator AI tool showcase with interactive before/after comparison
+- Webinar booking system with Cal.com integration
+- Contact form with Mailgun email integration
+- Dark/light theme with custom eucalyptus color palette
+- MDX-powered content pages
 
 ## Tech Stack
 
@@ -231,42 +227,14 @@ The project uses a custom **eucalyptus** color palette with two main colors:
 
 Both colors have 11-stop scales (50-950) defined as Tailwind utilities and CSS variables for consistent theming across light and dark modes.
 
-## Key Features in Detail
+See [DESIGN_GUIDELINES.md](DESIGN_GUIDELINES.md) and [STYLE_GUIDE.md](STYLE_GUIDE.md) for complete design system documentation.
 
-### Grünerator AI Tool
+## Documentation
 
-Dedicated showcase page for the Grünerator AI tool with:
-- Feature descriptions (text generation, image optimization, subtitle creation)
-- Interactive before/after image comparison with scroll animation
-- External link to [gruenerator.de](https://gruenerator.de)
-
-### Webinar Platform
-
-Three educational webinar tracks:
-1. **KI Basics** - Introduction to AI fundamentals
-2. **Grünerator Basics** - Beginner-level tool training
-3. **Grünerator Advanced** - Advanced features and workflows
-
-Features:
-- Embedded Cal.com calendar for direct booking
-- MDX-powered invitation pages with rich content
-- Difficulty level indicators
-
-### Theme System
-
-- Persistent dark/light theme toggle
-- System preference detection on first load
-- Stored in localStorage
-- Smooth transitions between modes
-- Complete CSS variable remapping for dark mode
-
-### Contact System
-
-Multi-layered contact options:
-- Contact form with validation and spam protection
-- Email integration via Mailgun
-- Rate limiting (5 submissions per 15 minutes per IP)
-- Success/error feedback with animations
+- **[CLAUDE.md](CLAUDE.md)** - Development guidelines for AI assistants (architecture, tech stack, conventions)
+- **[DESIGN_GUIDELINES.md](DESIGN_GUIDELINES.md)** - Color system, gradients, and semantic color usage
+- **[STYLE_GUIDE.md](STYLE_GUIDE.md)** - Comprehensive styling rules and patterns
+- **[CHAT_IMPLEMENTATION.md](CHAT_IMPLEMENTATION.md)** - Chat feature documentation
 
 ## Performance Optimizations
 
