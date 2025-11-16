@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
-
 /* Import existing modular CSS files before Tailwind */
 @import '../css/buttons.css';
 @import '../css/legal-pages.css';

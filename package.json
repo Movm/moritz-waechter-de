@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/raleway": "^5.2.8",
     "@hookform/resolvers": "^5.2.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.1",
