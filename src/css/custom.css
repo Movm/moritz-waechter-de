@@ -92,33 +92,51 @@
   --space-section-x: 1.5rem;
   --space-grid-gap: 2rem;
   --space-content-gap: 1rem;
+
+  /* Semantic background colors - auto-switch for light/dark mode */
+  --bg-page: var(--tertiary-50);         /* Main page canvas */
+  --bg-section: white;                   /* Section backgrounds */
+  --bg-section-alt: var(--tertiary-100); /* Alternate sections */
+  --bg-accent: var(--primary-50);        /* Accent bars/highlights */
+  --bg-card: white;                      /* Cards, inputs, forms */
+  --bg-hover-subtle: var(--primary-50);  /* Subtle hover states */
+  --bg-footer: #000;                     /* Footer background */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  /* Primary color mapped to lighter phtalo tones for dark mode */
-  --ifm-color-primary: var(--primary-300);
-  --ifm-color-primary-dark: var(--primary-400);
-  --ifm-color-primary-darker: var(--primary-500);
-  --ifm-color-primary-darkest: var(--primary-600);
-  --ifm-color-primary-light: var(--primary-200);
-  --ifm-color-primary-lighter: var(--primary-100);
-  --ifm-color-primary-lightest: var(--primary-50);
+/* Dark mode - Simple anthracite color scheme with minimal accents */
+html.dark {
+  /* Primary color - subtle green accent for interactive elements only */
+  --ifm-color-primary: var(--primary-400);
+  --ifm-color-primary-dark: var(--primary-500);
+  --ifm-color-primary-darker: var(--primary-600);
+  --ifm-color-primary-darkest: var(--primary-700);
+  --ifm-color-primary-light: var(--primary-300);
+  --ifm-color-primary-lighter: var(--primary-200);
+  --ifm-color-primary-lightest: var(--primary-100);
 
-  /* Semantic colors for dark mode */
-  --color-accent: var(--tertiary-800);  /* Darker cream for dark mode backgrounds */
-  --color-secondary: var(--secondary-400);  /* Lighter eucalyptus for visibility */
-  --color-tertiary: var(--tertiary-700);  /* Muted warm accent */
+  /* Semantic colors for dark mode - anthracite grays */
+  --color-accent: #3a3a3a;  /* Dark gray for subtle backgrounds */
+  --color-secondary: #4a4a4a;  /* Medium gray for supporting elements */
+  --color-tertiary: #2a2a2a;  /* Darker gray for cards */
 
-  /* Gradients for dark mode */
-  --background-gradient: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-950) 100%);
-  --accent-gradient: linear-gradient(to right, var(--primary-300) 0%, var(--primary-500) 100%);
+  /* Gradients for dark mode - simplified anthracite */
+  --background-gradient: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  --accent-gradient: linear-gradient(to right, var(--primary-400) 0%, var(--primary-500) 100%);
 
   /* Semantic text colors for dark mode */
   --text-primary: #e5e5e5;
-  --text-heading: #e5e5e5;
+  --text-heading: #f5f5f5;
   --text-secondary: #b5b5b5;
   --text-muted: #8a8a8a;
+
+  /* Semantic background colors for dark mode - anthracite theme */
+  --bg-page: #1a1a1a;                    /* Main page canvas */
+  --bg-section: #2a2a2a;                 /* Section backgrounds */
+  --bg-section-alt: #2a2a2a;             /* Alternate sections */
+  --bg-accent: #2a2a2a;                  /* Accent bars/highlights */
+  --bg-card: #2a2a2a;                    /* Cards, inputs, forms */
+  --bg-hover-subtle: rgba(107, 170, 145, 0.1); /* Subtle hover states */
+  --bg-footer: #1a1a1a;                  /* Footer background */
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
@@ -170,8 +188,8 @@
   margin-top: auto !important;
 }
 
-[data-theme='dark'] .footer {
-  background-color: var(--dark-background-darker) !important;
+html.dark .footer {
+  background-color: var(--bg-footer) !important;
 }
 
 /* Remove unwanted padding and margins from .col on full-width pages */

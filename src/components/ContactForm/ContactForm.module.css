@@ -57,7 +57,7 @@
   font-size: 1rem;
   font-family: inherit;
   color: var(--text-primary);
-  background: white;
+  background: var(--bg-card);
   border: 2px solid var(--secondary-200);
   border-radius: 8px;
   transition: all 0.2s ease;
@@ -66,8 +66,7 @@
 
 :global(html.dark) .input,
 :global(html.dark) .textarea {
-  background: var(--tertiary-950);
-  border-color: var(--secondary-600);
+  border-color: #333333;
 }
 
 /* Remove focus effects for mouse clicks */
@@ -113,7 +112,7 @@
 
 :global(html.dark) .input:disabled,
 :global(html.dark) .textarea:disabled {
-  background: var(--dark-background);
+  background: #1a1a1a;
 }
 
 /* Textarea specific */
@@ -183,9 +182,9 @@
 }
 
 :global(html.dark) .successMessage {
-  background: var(--secondary-900);
-  border-color: var(--secondary-600);
-  color: var(--primary-300);
+  background: var(--bg-card);
+  border-color: #333333;
+  color: var(--primary-400);
 }
 
 /* Error message */
@@ -204,9 +203,9 @@
 }
 
 :global(html.dark) .errorMessage {
-  background: #3a1a1a;
-  border-color: #7f1d1d;
-  color: #fca5a5;
+  background: var(--bg-card);
+  border-color: #333333;
+  color: #ef4444;
 }
 
 /* Message icons */

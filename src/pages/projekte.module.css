@@ -3,21 +3,13 @@
 /* Container and layout */
 .container {
   min-height: 100vh;
-  background: var(--tertiary-50);
-}
-
-:global(html.dark) .container {
-  background: var(--primary-950);
+  background: var(--bg-page);
 }
 
 /* Content Section */
 .contentSection {
-  background-color: white;
+  background-color: var(--bg-section);
   padding: 4rem 2rem;
-}
-
-:global(html.dark) .contentSection {
-  background-color: var(--dark-background);
 }
 
 .contentGrid {

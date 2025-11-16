@@ -4,11 +4,7 @@
 .container {
   position: relative;
   min-height: 100vh;
-  background-color: var(--tertiary-50);
-}
-
-:global(html.dark) .container {
-  background-color: var(--primary-950);
+  background-color: var(--bg-page);
 }
 
 /* Hero Section */
@@ -129,12 +125,8 @@
 
 /* Facts Section */
 .factsSection {
-  background-color: white;
+  background-color: var(--bg-section);
   padding: 4rem 2rem;
-}
-
-:global(html.dark) .factsSection {
-  background-color: var(--dark-background);
 }
 
 .factsContent {
@@ -220,7 +212,7 @@
 
 :global(html.dark) .textLink {
   color: var(--primary-400);
-  border-bottom-color: var(--primary-400);
+  border-bottom-color: #444444;
 }
 
 .textLink:hover {
@@ -229,12 +221,8 @@
 
 /* Info Section (alternating with Facts) */
 .infoSection {
-  background-color: white;
+  background-color: var(--bg-section);
   padding: 4rem 2rem;
-}
-
-:global(html.dark) .infoSection {
-  background-color: var(--dark-background);
 }
 
 .infoContent {
@@ -281,12 +269,8 @@
 /* Contact Section */
 .contactSection {
   position: relative;
-  background: white;
+  background: var(--bg-section);
   padding: 3rem 2rem 6rem 2rem;
-}
-
-:global(html.dark) .contactSection {
-  background: var(--dark-background);
 }
 
 .contactContent {
@@ -344,12 +328,12 @@
 }
 
 :global(html.dark) .alternativeButton {
-  border-color: var(--primary-500);
-  color: var(--primary-300);
+  border-color: #333333;
+  color: var(--primary-400);
 }
 
 .alternativeButton:hover {
-  background: var(--primary-50);
+  background: var(--bg-hover-subtle);
   border-color: var(--primary-600);
   color: var(--primary-600);
   text-decoration: none;
@@ -357,8 +341,7 @@
 }
 
 :global(html.dark) .alternativeButton:hover {
-  background: color-mix(in srgb, var(--primary-600) 10%, transparent);
-  border-color: var(--primary-400);
+  border-color: #555555;
   color: var(--primary-400);
 }
 
@@ -372,7 +355,7 @@
 
 /* Footer */
 .footer {
-  background-color: #000;
+  background-color: var(--bg-footer);
   padding: 2rem 1.5rem;
   text-align: center;
 }
@@ -426,22 +409,14 @@
 
 /* White Background Section */
 .whiteBackground {
-  background: white;
+  background: var(--bg-section);
   margin-bottom: 0;
-}
-
-:global(html.dark) .whiteBackground {
-  background: var(--dark-background);
 }
 
 /* Cream Background Section - for progressive depth pattern */
 .creamBackground {
-  background: var(--tertiary-100);
+  background: var(--bg-section-alt);
   margin-bottom: 0;
-}
-
-:global(html.dark) .creamBackground {
-  background: var(--tertiary-900);
 }
 
 /* Bottom Accent Bar - positioned inside content to layer under images */
@@ -453,7 +428,7 @@
   transform: translateX(-50%);
   width: min(100vw, 1920px);
   height: 36px;
-  background: var(--primary-50);
+  background: var(--bg-accent);
   z-index: 0;
 }
 
@@ -461,10 +436,6 @@
   .bottomAccentBar {
     display: block;
   }
-}
-
-:global(html.dark) .bottomAccentBar {
-  background: var(--primary-700);
 }
 
 /* Right Side Accent Bar */
@@ -475,7 +446,7 @@
   right: -2rem;
   width: min(calc(10vw + 2rem), 250px);
   height: calc(100% + 4rem);
-  background: var(--primary-50);
+  background: var(--bg-accent);
   z-index: 0;
 }
 
@@ -485,19 +456,11 @@
   }
 }
 
-:global(html.dark) .rightAccentBar {
-  background: var(--primary-600);
-}
-
 /* Primary-50 Background with Primary Bottom Line */
 .secondary100WithSecondary200Line {
   position: relative;
-  background: var(--primary-50);
+  background: var(--bg-accent);
   padding-top: 2rem;
-}
-
-:global(html.dark) .secondary100WithSecondary200Line {
-  background: var(--primary-900);
 }
 
 .secondary100WithSecondary200Line::after {
@@ -507,7 +470,7 @@
   left: 0;
   right: 0;
   height: 36px;
-  background: var(--primary-50);
+  background: var(--bg-accent);
   display: none;
 }
 
@@ -515,10 +478,6 @@
   .secondary100WithSecondary200Line::after {
     display: block;
   }
-}
-
-:global(html.dark) .secondary100WithSecondary200Line::after {
-  background: var(--primary-600);
 }
 
 .imageTextGrid {
