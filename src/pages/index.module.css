@@ -305,26 +305,38 @@
 /* Alternative contact buttons */
 .alternativeButtons {
   display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
   justify-content: center;
-  margin-bottom: 3rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .alternativeButtons {
+    flex-direction: row;
+    max-width: none;
+    gap: 1.5rem;
+  }
 }
 
 .alternativeButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
   background: transparent;
-  border: 1.5px solid var(--primary-300);
-  border-radius: 50%;
+  border: 2px solid var(--secondary-200);
+  border-radius: 12px;
   color: var(--primary-700);
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
   transition: all 0.2s ease;
+  flex: 1;
+  min-width: 200px;
 }
 
 :global(html.dark) .alternativeButton {
@@ -337,19 +349,23 @@
   border-color: var(--primary-600);
   color: var(--primary-600);
   text-decoration: none;
-  transform: scale(1.05);
 }
 
 :global(html.dark) .alternativeButton:hover {
+  background: rgba(255, 255, 255, 0.05);
   border-color: #555555;
   color: var(--primary-400);
 }
 
 .alternativeIcon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
   color: inherit;
+}
+
+.alternativeButtonText {
+  white-space: nowrap;
 }
 
 
