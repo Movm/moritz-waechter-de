@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
                 to="/projekte"
                 className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200 whitespace-nowrap"
               >
-                Grünerator
+                Projekte
               </Link>
               <Link
                 to="/webinare"
@@ -154,7 +154,7 @@ export const Header: React.FC = () => {
                     onClick={closeMenu}
                     className="block py-2 text-sm xl:text-base 2xl:text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                   >
-                    Grünerator
+                    Projekte
                   </Link>
 
                   <Link

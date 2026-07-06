@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
                   to="/projekte"
                   className="text-gray-300 hover:text-primary-400 transition-all duration-300 hover:translate-x-1 inline-block"
                 >
-                  Grünerator
+                  Projekte
                 </Link>
               </li>
               <li>

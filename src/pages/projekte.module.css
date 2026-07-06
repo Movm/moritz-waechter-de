@@ -6,59 +6,77 @@
   background: var(--bg-page);
 }
 
-/* Content Section */
 .contentSection {
   background-color: var(--bg-section);
   padding: 4rem 2rem;
 }
 
-.contentGrid {
+.projectStack {
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  gap: 5rem;
 }
 
 @media (min-width: 1280px) {
-  .contentGrid {
+  .projectStack {
     max-width: 1400px;
   }
 }
 
 @media (min-width: 1536px) {
-  .contentGrid {
+  .projectStack {
     max-width: 1536px;
   }
 }
 
-.sectionHeading {
-  font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
-  font-weight: 900;
-  font-style: italic;
-  color: var(--text-heading);
-  position: relative;
-  margin: 0 0 1.5rem 0;
-  display: block;
-  width: fit-content;
+.projectArticle {
+  border-top: 1px solid color-mix(in srgb, var(--text-primary) 18%, transparent);
+  padding-top: 3rem;
 }
 
-.sectionHeading::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0.25rem;
-  width: 60px;
-  height: 4px;
-  background: var(--accent-gradient);
+.projectArticle:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.projectIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.projectEyebrow {
+  color: var(--primary-600);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+:global(html.dark) .projectEyebrow {
+  color: var(--primary-300);
+}
+
+.projectIntro h2 {
+  color: var(--text-heading);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.1;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
-  .sectionHeading {
-    text-align: center;
-    margin: 0 auto 1.5rem auto;
-  }
-
-  .sectionHeading::after {
-    left: 50%;
-    transform: translateX(-50%);
+  .projectIntro {
+    align-items: center;
+    flex-direction: row;
   }
 }
 
@@ -83,7 +101,8 @@
 .sectionImage {
   width: 100%;
   height: auto;
-  margin: 2rem 0;
+  max-width: 960px;
+  margin: 2rem auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: block;
@@ -117,15 +136,41 @@
   opacity: 0.7;
 }
 
-.projectLink {
-  composes: primaryButtonLink from global;
-  margin-top: 2rem;
-  display: inline-flex;
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.linkIcon {
-  width: 1rem;
-  height: 1rem;
+.iconProjectLink {
+  align-items: center;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--text-primary) 18%, transparent);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 2.75rem;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  width: 2.75rem;
 }
 
+.iconProjectLink:hover {
+  background: var(--bg-hover-subtle);
+  border-color: var(--primary-600);
+  color: var(--primary-700);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+:global(html.dark) .iconProjectLink:hover {
+  border-color: var(--primary-300);
+  color: var(--primary-300);
+}
+
+.linkIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
