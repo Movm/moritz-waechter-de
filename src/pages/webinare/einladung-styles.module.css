@@ -89,6 +89,87 @@
   background: rgb(38, 38, 38);
 }
 
+.presentationSection {
+  position: relative;
+  padding: 1rem 1.5rem 5rem;
+}
+
+.presentationContainer {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.presentationHeader {
+  max-width: 48rem;
+  margin-bottom: 1.5rem;
+}
+
+.presentationHeader h2 {
+  font-family: 'Raleway', ui-serif, Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  margin: 0 0 0.75rem;
+}
+
+:global(html.dark) .presentationHeader h2 {
+  color: white;
+}
+
+.presentationHeader p {
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgb(75, 85, 99);
+  margin: 0;
+}
+
+:global(html.dark) .presentationHeader p {
+  color: rgb(212, 212, 212);
+}
+
+.presentationFrame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: rgb(243, 244, 246);
+  box-shadow: 0 20px 45px -24px rgba(0, 0, 0, 0.35);
+}
+
+:global(html.dark) .presentationFrame {
+  background: rgb(23, 23, 23);
+}
+
+.presentationFrame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.presentationLink {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-family: 'Open Sans', ui-sans-serif, system-ui;
+  font-weight: 700;
+  color: var(--color-700);
+  text-decoration: none;
+}
+
+.presentationLink:hover {
+  color: var(--color-800);
+  text-decoration: underline;
+}
+
+:global(html.dark) .presentationLink {
+  color: var(--color-300);
+}
+
+:global(html.dark) .presentationLink:hover {
+  color: var(--color-200);
+}
+
 /* Remove default MDX/Docusaurus margins */
 .invitationContainer > div {
   margin: 0;

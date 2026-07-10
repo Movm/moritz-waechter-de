@@ -5,10 +5,16 @@ import styles from '../einladung-styles.module.css';
 interface InvitationLayoutProps {
   title: string;
   description: string;
+  presentation?: {
+    title: string;
+    description?: string;
+    embedUrl: string;
+    linkUrl: string;
+  };
   children: ReactNode;
 }
 
-export default function InvitationLayout({ title, description, children }: InvitationLayoutProps) {
+export default function InvitationLayout({ title, description, presentation, children }: InvitationLayoutProps) {
   const [copied, setCopied] = useState(false);
   const invitationRef = useRef<HTMLDivElement>(null);
 
@@ -68,6 +74,34 @@ export default function InvitationLayout({ title, description, children }: Invit
             </div>
           </div>
         </div>
+
+        {presentation && (
+          <section className={styles.presentationSection}>
+            <div className={styles.presentationContainer}>
+              <div className={styles.presentationHeader}>
+                <h2>{presentation.title}</h2>
+                {presentation.description && <p>{presentation.description}</p>}
+              </div>
+              <div className={styles.presentationFrame}>
+                <iframe
+                  src={presentation.embedUrl}
+                  title={presentation.title}
+                  loading="lazy"
+                  allowFullScreen
+                  allow="fullscreen"
+                />
+              </div>
+              <a
+                className={styles.presentationLink}
+                href={presentation.linkUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Präsentation in Canva öffnen
+              </a>
+            </div>
+          </section>
+        )}
 
       </div>
     </Layout>
