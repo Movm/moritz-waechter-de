@@ -41,6 +41,23 @@
     <!-- Mobile & Browser Enhancement -->
     <meta name="theme-color" content="#316049" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+    <script>
+      (() => {
+        try {
+          const preference = localStorage.getItem('theme-preference');
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = preference === 'dark' || (preference !== 'light' && systemDark);
+          const resolvedTheme = isDark ? 'dark' : 'light';
+          const root = document.documentElement;
+
+          root.classList.toggle('dark', isDark);
+          root.dataset.theme = resolvedTheme;
+          root.style.colorScheme = resolvedTheme;
+        } catch {
+          // Keep the light CSS default if storage or matchMedia is unavailable.
+        }
+      })();
+    </script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Moritz Wächter" />
