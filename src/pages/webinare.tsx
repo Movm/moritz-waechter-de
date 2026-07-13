@@ -1,7 +1,6 @@
 import type {ReactNode} from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Hero } from '@/components';
-import { WebinarCalendars } from '@/components/WebinarBooking/WebinarCalendars';
 import styles from './webinare.module.css';
 import { HiCog, HiSparkles } from 'react-icons/hi';
 
@@ -59,9 +58,6 @@ export default function WebinarePage(): ReactNode {
 
         {/* Webinars Section */}
         <WebinarLeftRightSection items={webinars} />
-
-        {/* Booking Section */}
-        <WebinarCalendars />
 
         {/* Contact Section */}
         <div className={styles.contactSection}>
