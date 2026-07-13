@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HiMoon, HiSun, HiMenu, HiX } from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from '@/contexts/ThemeContext';
 
 export const Header: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -70,18 +68,6 @@ export const Header: React.FC = () => {
               </Link>
             </div>
 
-            {/* Desktop Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="hidden md:block hover:scale-110 active:scale-95 transition-transform duration-200 ease-in-out p-1"
-              aria-label="Toggle dark mode"
-            >
-              {theme === 'dark' ? (
-                <HiSun className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors duration-200" />
-              ) : (
-                <HiMoon className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200" />
-              )}
-            </button>
           </div>
 
           {/* Mobile Hamburger/Close Button */}
@@ -165,18 +151,6 @@ export const Header: React.FC = () => {
                     Webinare
                   </Link>
 
-                  {/* Mobile Theme Toggle */}
-                  <button
-                    onClick={toggleTheme}
-                    className="py-2 hover:scale-110 active:scale-95 transition-transform duration-200 ease-in-out"
-                    aria-label="Toggle dark mode"
-                  >
-                    {theme === 'dark' ? (
-                      <HiSun className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors duration-200" />
-                    ) : (
-                      <HiMoon className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200" />
-                    )}
-                  </button>
                 </div>
               </div>
             </motion.div>

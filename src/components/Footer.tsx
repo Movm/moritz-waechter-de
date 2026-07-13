@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HiDesktopComputer, HiMoon, HiSun } from 'react-icons/hi';
+import { useTheme } from '@/contexts/ThemeContext';
 
 export const Footer: React.FC = () => {
+  const { preference, cycleTheme } = useTheme();
   const currentYear = new Date().getFullYear();
+  const themeLabel = preference === 'system' ? 'System' : preference === 'light' ? 'Hell' : 'Dunkel';
+  const nextThemeLabel = preference === 'system' ? 'Hell' : preference === 'light' ? 'Dunkel' : 'System';
+  const themeControlLabel = `Farbschema: ${themeLabel}. Wechseln zu ${nextThemeLabel}.`;
+  const themeIconClassName = 'w-5 h-5';
 
   return (
     <footer className="bg-gradient-to-br from-dark-darker via-dark-darker to-secondary-900 text-gray-300 mt-auto">
@@ -128,6 +135,24 @@ export const Footer: React.FC = () => {
           <p className="text-sm text-center text-gray-400 mt-2">
             Mit Herz für Open Source
           </p>
+          <div className="flex justify-center mt-6">
+            <button
+              type="button"
+              onClick={cycleTheme}
+              className="inline-flex items-center gap-2 rounded-full border border-gray-700 px-4 py-2 text-sm text-gray-300 transition-all duration-300 hover:border-primary-400 hover:text-primary-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-darker"
+              aria-label={themeControlLabel}
+              title={themeControlLabel}
+            >
+              {preference === 'system' ? (
+                <HiDesktopComputer className={themeIconClassName} aria-hidden="true" />
+              ) : preference === 'light' ? (
+                <HiSun className={themeIconClassName} aria-hidden="true" />
+              ) : (
+                <HiMoon className={themeIconClassName} aria-hidden="true" />
+              )}
+              <span>Farbschema: {themeLabel}</span>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
