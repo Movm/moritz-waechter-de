@@ -9,6 +9,7 @@ import WebinarePage from './pages/webinare';
 import ImpressumPage from './pages/impressum';
 import PrivacyPage from './pages/privacy';
 import GrueneratorBasicsDankePage from './pages/webinare/gruenerator-basics-danke';
+import GrueneratorAdvancedDankePage from './pages/webinare/gruenerator-advanced-danke';
 
 // Lazy load MDX pages
 const KIBasicsPage = lazy(() => import('./pages/webinare/ki-basics.mdx'));
@@ -81,6 +82,10 @@ function App() {
             <GrueneratorAdvancedPage />
           </Suspense>
         }
+      />
+      <Route
+        path="/webinare/gruenerator-advanced/danke"
+        element={<GrueneratorAdvancedDankePage />}
       />
 
       {/* 404 catch-all route */}

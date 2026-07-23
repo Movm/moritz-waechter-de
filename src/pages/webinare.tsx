@@ -31,7 +31,7 @@ const webinars = [
   },
   {
     title: "Grünerator Advanced",
-    description: "Du kennst den Grünerator schon? Dann lerne jetzt die fortgeschrittenen Funktionen kennen. Im Webinar zeige ich Dir, wie du einen Account erstellst und konfigurierst, wie du dir deinen ersten eigenen Grünerator erstellst und wie du unsere Grüne Nextcloud einbindest.",
+    description: "Du kennst den Grünerator schon? Dann lerne jetzt die fortgeschrittenen Funktionen kennen. Im Webinar zeige ich dir, wie du Wissen in Notebooks organisierst, eigene Agents erstellst und mit Gruppen und Boards gemeinsam arbeitest.",
     duration: "90 Minuten",
     level: "Fortgeschritten",
     additionalMetadata: "Grundkenntnisse erforderlich",
