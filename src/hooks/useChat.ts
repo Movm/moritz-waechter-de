@@ -133,7 +133,7 @@ export const useChat = (initialTopic: ChatTopic | null = null) => {
 
       // For webinar bookings, ask for zeitraum next
       if (topic === 'webinar') {
-        addMessage('bot', 'Super! In welchem Zeitraum möchtest du das Webinar buchen? (z.B. "nächste 2 Wochen", "im März", "Anfang April")');
+        addMessage('bot', 'Super! In welchem Zeitraum möchtest du das Webinar buchen? (z. B. „in den nächsten zwei Wochen“, „im März“, „Anfang April“)');
         setState((prev) => ({
           ...prev,
           step: 'zeitraum-input',
@@ -239,7 +239,7 @@ Ist alles korrekt?`;
 
     setTimeout(() => {
       hideTyping();
-      addMessage('bot', 'Perfekt! Hast du bevorzugte Tage oder Uhrzeiten? (z.B. "Montags und Mittwochs nachmittags", "Dienstag oder Donnerstag ab 18 Uhr")');
+      addMessage('bot', 'Perfekt! Hast du bevorzugte Tage oder Uhrzeiten? (z. B. „montags und mittwochs nachmittags“, „Dienstag oder Donnerstag ab 18 Uhr“)');
       setState((prev) => ({
         ...prev,
         step: 'preferred-time-input',

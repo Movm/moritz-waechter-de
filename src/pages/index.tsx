@@ -64,7 +64,7 @@ export default function Home(): ReactNode {
             <div className={styles.textColumn}>
               <h2 className={styles.imageTextHeading}>
                 Künstliche Intelligenz.{' '}
-                <span className={styles.emphasisText}>Aber <strong><TextMarker>Sinnvoll</TextMarker></strong>.</span>
+                <span className={styles.emphasisText}>Aber <strong><TextMarker>sinnvoll</TextMarker></strong>.</span>
               </h2>
               <p className={styles.imageTextBody}>
                 KI kann vieles – aber nicht alles sollte sie auch tun. Ich nutze künstliche Intelligenz dort, wo sie <span className={styles.boldText}>echten Mehrwert</span> schafft: bei der Erstellung von Grafiken, beim Verfassen von Texten oder bei der Automatisierung repetitiver Aufgaben.
@@ -81,15 +81,15 @@ export default function Home(): ReactNode {
           <div className={styles.bottomAccentBar}></div>
         </Section>
 
-        {/* Section 2: Also, wirklich Sinnvoll */}
+        {/* Section 2: Also, wirklich sinnvoll */}
         <Section className={`${styles.imageTextSection} ${styles.secondary100WithSecondary200Line}`}>
           <div className={styles.verticalStackSection}>
             <div className={styles.verticalStackText}>
               <h2 className={styles.imageTextHeading}>
-                Also, <span className={styles.emphasisText}>wirklich <strong>Sinnvoll</strong>.</span>
+                Also, <span className={styles.emphasisText}>wirklich <strong>sinnvoll</strong>.</span>
               </h2>
               <p className={styles.imageTextBody}>
-                Ich bin der <span className={styles.boldText}>Entwickler des Grünerators</span> – ein KI-Tool, das ich speziell für die Grünen entwickelt habe. Er erstellt Grüne Texte, begrünt triste Innenstädte und erstellt Untertitel für Reels. Das Ergebnis: <span className={styles.boldText}>Weniger Zeitaufwand, mehr politische Wirkung.</span>
+                Ich bin der <span className={styles.boldText}>Entwickler des Grünerators</span> – ein KI-Tool, das ich speziell für die Grünen entwickelt habe. Er erstellt grüne Texte, begrünt triste Innenstädte und erstellt Untertitel für Reels. Das Ergebnis: <span className={styles.boldText}>Weniger Zeitaufwand, mehr politische Wirkung.</span>
               </p>
             </div>
             <div className={styles.verticalStackImage}>
@@ -126,11 +126,11 @@ export default function Home(): ReactNode {
           <div className={styles.rightAccentBar}></div>
         </Section>
 
-        {/* Section 4: Tue gutes */}
+        {/* Section 4: Tue Gutes */}
         <Section className={`${styles.imageTextSection} ${styles.lastSection}`}>
           <div className={styles.textOnlyContent}>
             <h2 className={styles.multiLineHeading}>
-              Tue <strong>gutes</strong>. Und sprich/schreib/poste/tweete darüber.
+              Tue <strong>Gutes</strong>. Und sprich/schreib/poste/tweete darüber.
             </h2>
             <p className={styles.imageTextBody}>
               Kommunikation ist Politik. Wer Veränderung will, muss darüber reden – <span className={styles.boldText}>laut, klar und für alle verständlich</span>. Deshalb schreibe ich Texte, gestalte Grafiken und teile Ideen. Denn die beste Idee bringt nichts, wenn sie keiner kennt.

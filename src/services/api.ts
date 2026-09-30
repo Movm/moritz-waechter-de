@@ -51,7 +51,7 @@ export const sendChatEmail = async (
 
       if (response.status >= 500) {
         throw new ApiError(
-          'Server-Fehler. Bitte versuche es später erneut.',
+          'Serverfehler. Bitte versuche es später erneut.',
           response.status,
           'SERVER_ERROR'
         );

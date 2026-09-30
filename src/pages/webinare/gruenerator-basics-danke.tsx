@@ -10,7 +10,7 @@ export default function GrueneratorBasicsDankePage() {
   return (
     <Layout
       title="Danke für deine Teilnahme"
-      description="Die Präsentation zum Grünerator Basics Webinar herunterladen und nochmals ansehen."
+      description="Die Präsentation zum Grünerator-Basics-Webinar herunterladen und nochmals ansehen."
     >
       <div className={styles.page}>
         <section className={styles.intro}>

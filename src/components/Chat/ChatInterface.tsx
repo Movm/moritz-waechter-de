@@ -116,7 +116,7 @@ export const ChatInterface = ({ initialTopic = null, onClose }: ChatInterfacePro
       return (
         <ChatInput
           onSubmit={submitZeitraum}
-          placeholder="z.B. 'nächste 2 Wochen', 'im März'"
+          placeholder="z. B. „in den nächsten zwei Wochen“, „im März“"
           disabled={state.isLoading}
           error={state.error}
         />
@@ -127,7 +127,7 @@ export const ChatInterface = ({ initialTopic = null, onClose }: ChatInterfacePro
       return (
         <ChatInput
           onSubmit={submitPreferredTime}
-          placeholder="z.B. 'Montags nachmittags', 'Dienstag ab 18 Uhr'"
+          placeholder="z. B. „montags nachmittags“, „Dienstag ab 18 Uhr“"
           disabled={state.isLoading}
           error={state.error}
         />

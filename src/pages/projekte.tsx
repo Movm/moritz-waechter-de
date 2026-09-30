@@ -56,7 +56,7 @@ export default function ProjektePage(): ReactNode {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.iconProjectLink}
-                    aria-label="Grünerator Website öffnen"
+                    aria-label="Grünerator-Website öffnen"
                     title="Website öffnen"
                   >
                     <HiExternalLink className={styles.linkIcon} aria-hidden="true" />
@@ -76,16 +76,16 @@ export default function ProjektePage(): ReactNode {
 
               <img
                 src="/img/screenshot_gruenerator.png"
-                alt="Grünerator Screenshot"
+                alt="Screenshot des Grünerators"
                 className={styles.sectionImage}
               />
 
               <div className={styles.contentText}>
                 <p>
-                  Der Grünerator ist ein speziell für Bündnis 90/Die Grünen entwickeltes KI-Tool. Er erstellt Texte wie Pressemitteilungen, Social-Media-Beiträge, Anträge für kommunale Parlamente und viele weitere. Außerdem kann er Sharepics "grünerieren" und beim Erstellen von Untertiteln helfen.
+                  Der Grünerator ist ein speziell für Bündnis 90/Die Grünen entwickeltes KI-Tool. Er erstellt Texte wie Pressemitteilungen, Social-Media-Beiträge, Anträge für kommunale Parlamente und viele weitere Textsorten. Außerdem kann er Sharepics „grünerieren“ und beim Erstellen von Untertiteln helfen.
                 </p>
 
-                <h3>Denkt und spricht Grün</h3>
+                <h3>Denkt und spricht grün</h3>
                 <p>
                   Der Grünerator wurde anhand grüner Sprache antrainiert. Wenn er einen Beitrag für Instagram oder eine Pressemitteilung erstellt, klingt dieser grün und fühlt sich grün an.
                 </p>
@@ -95,7 +95,7 @@ export default function ProjektePage(): ReactNode {
                   Der Grünerator verwendet eine stark vereinfachte Benutzeroberfläche, die fast jede:r auf Anhieb versteht. Er wurde so designt, dass er von allen Ehrenamtlichen aller Altersklassen verwendet werden kann. Die UI orientiert sich stark an Seiten, die die Nutzer:innen kennen und lieben.
                 </p>
                 <p>
-                  Er nutzt modernste KI-Modelle - im Standard-Modus das europäische Mistral AI und im Pro-Modus Claude Sonnet von Anthropic, das als eines der besten Sprachmodelle für kreatives Schreiben gilt und Ergebnisse liefert, die in der Regel die von ChatGPT überbieten.
+                  Er nutzt modernste KI-Modelle – im Standardmodus ein Modell des europäischen Anbieters Mistral AI und im Pro-Modus Claude Sonnet von Anthropic. Letzteres gilt als eines der besten Sprachmodelle für kreatives Schreiben und liefert Ergebnisse, die in der Regel die von ChatGPT überbieten.
                 </p>
 
                 <h3>Datenschutz per Design</h3>
@@ -110,7 +110,7 @@ export default function ProjektePage(): ReactNode {
 
                 <h3>Mit Herz für Open-Source</h3>
                 <p>
-                  Der Grünerator wurde auf Basis von Open-Source-Software entwickelt und liegt auf den Servern der Netzbegrünung. Die netzbegrünung ist ein Verein für grüne Netzkultur e.V., der sich seit 2006 für die Förderung der Demokratie im digitalen Raum und eine nachhaltige digitale Infrastruktur einsetzt. Mit über 500 Mitgliedern aus Deutschland und Österreich entwickelt die netzbegrünung innovative digitale Lösungen und vermittelt Fachwissen zu digitalpolitischen Inhalten.
+                  Der Grünerator wurde auf Basis von Open-Source-Software entwickelt und liegt auf den Servern der Netzbegrünung. Die netzbegrünung ist ein Verein für grüne Netzkultur e. V., der sich seit 2006 für die Förderung der Demokratie im digitalen Raum und eine nachhaltige digitale Infrastruktur einsetzt. Mit über 500 Mitgliedern aus Deutschland und Österreich entwickelt die netzbegrünung innovative digitale Lösungen und vermittelt Fachwissen zu digitalpolitischen Inhalten.
                 </p>
               </div>
             </article>
@@ -127,7 +127,7 @@ export default function ProjektePage(): ReactNode {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.iconProjectLink}
-                    aria-label="Bundestag Wrapped Website öffnen"
+                    aria-label="Bundestag-Wrapped-Website öffnen"
                     title="Website öffnen"
                   >
                     <HiExternalLink className={styles.linkIcon} aria-hidden="true" />
@@ -147,7 +147,7 @@ export default function ProjektePage(): ReactNode {
 
               <img
                 src="/img/bundestag-wrapped-preview.png"
-                alt="Bundestag Wrapped Vorschau"
+                alt="Vorschau von Bundestag Wrapped"
                 className={styles.sectionImage}
               />
 

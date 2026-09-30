@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
           <motion.button
             onClick={toggleMenu}
             className="md:hidden hover:scale-110 active:scale-95 transition-transform duration-200 ease-in-out p-1"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMenuOpen ? 'Menü schließen' : 'Menü öffnen'}
             whileTap={{ scale: 0.95 }}
           >
             <AnimatePresence mode="wait" initial={false}>
