@@ -32,7 +32,7 @@ export default function UeberMich(): ReactNode {
   return (
     <Layout
       title="Über mich"
-      description="Erfahre mehr über Moritz Wächter - Student der Politikwissenschaften, Grünen-Politiker und Kommunikationsexperte aus dem Rhein-Sieg-Kreis.">
+      description="Erfahre mehr über Moritz Wächter – Student der Politikwissenschaft, Grünen-Politiker und Kommunikationsexperte aus dem Rhein-Sieg-Kreis.">
       <div className={styles.container}>
         {/* Hero Section */}
         <Hero
@@ -67,7 +67,7 @@ export default function UeberMich(): ReactNode {
                 Ich studiere Politikwissenschaften an der Rheinischen Friedrich-Wilhelms-Universität
                 und bin nebenberuflich bei der bpb sowie Martin Metz, MdL. Vorher habe ich drei Jahre
                 lang als Assistent von Alexandra Geese, MdEP in Bonn gearbeitet. Im Rahmen meines
-                Bachelorstudiums der Sozialpolitik an der Hochschule Bonn-Rhein-Sieg forschte über
+                Bachelorstudiums der Sozialpolitik an der Hochschule Bonn-Rhein-Sieg forschte ich über
                 die soziale Mobilität von Kindertagesstätten. Ganzer Lebenslauf auf{' '}
                 <a
                   href="https://www.linkedin.com/in/moritz-waechter/"
@@ -82,7 +82,7 @@ export default function UeberMich(): ReactNode {
               <h3>Politik</h3>
               <p>
                 Ich bin Mitglied der Grünen Jugend und Kreisvorsitzender der Grünen im Rhein-Sieg-Kreis.
-                Mein Herz schlägt für Sozial- und Familienpolitik, aber seit ich bei den Grünen bin
+                Mein Herz schlägt für Sozial- und Familienpolitik, aber seit ich bei den Grünen bin,
                 kämpfe ich auch für Umwelt- und Klimaschutz.
               </p>
 

@@ -7,7 +7,7 @@ import { HiCog, HiSparkles } from 'react-icons/hi';
 const webinars = [
   {
     title: "KI Basics",
-    description: "Ehrenamtliche Arbeit ist ganz schön zeitaufwendig. Manchmal wünschen wir uns ein paar helfende Hände, die uns bei den ausführenden Tätigkeiten unterstützen. Dafür gibt es jetzt Künstliche Intelligenz. Sie kann uns die Arbeit im Ortsverband oder in der Fraktion erleichtern. Im Webinar zeige ich dir, wie ChatGPT und Co funktionieren und welche Tools dich am besten in der Arbeit vor Ort unterstützen.",
+    description: "Ehrenamtliche Arbeit ist ganz schön zeitaufwendig. Manchmal wünschen wir uns ein paar helfende Hände, die uns bei den ausführenden Tätigkeiten unterstützen. Dafür gibt es jetzt künstliche Intelligenz. Sie kann uns die Arbeit im Ortsverband oder in der Fraktion erleichtern. Im Webinar zeige ich dir, wie ChatGPT und Co. funktionieren und welche Tools dich am besten bei der Arbeit vor Ort unterstützen.",
     duration: "90 Minuten",
     level: "Anfänger",
     additionalMetadata: "Keine Vorkenntnisse erforderlich",
@@ -19,7 +19,7 @@ const webinars = [
   },
   {
     title: "Grünerator Basics",
-    description: "Du möchtest Pressemitteilungen schneller erstellen oder Deine Social-Media-Präsenz stärken? Der Grünerator macht's möglich. Im Webinar zeige ich Dir, wie Du das KI-Tool optimal einsetzt, um Deine Arbeit vor Ort zu unterstützen. Der Grünerator ist ein speziell für die Grünen entwickeltes KI-Tool, das grüne Inhalte nach Wahl erstellen kann.",
+    description: "Du möchtest Pressemitteilungen schneller erstellen oder deine Social-Media-Präsenz stärken? Der Grünerator macht’s möglich. Im Webinar zeige ich dir, wie du das KI-Tool optimal einsetzt, um deine Arbeit vor Ort zu unterstützen. Der Grünerator ist ein speziell für die Grünen entwickeltes KI-Tool, das grüne Inhalte nach Wahl erstellen kann.",
     duration: "90 Minuten",
     level: "Anfänger",
     additionalMetadata: "Keine Vorkenntnisse erforderlich",
