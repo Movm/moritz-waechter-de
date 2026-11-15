@@ -55,25 +55,30 @@ const shell = `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>${esc(title)}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap">
 <style>
-  :root{--bg:#fbfcf9;--ink:#17201a;--muted:#56635a;--rule:#dfe5dc;--accent:#005538;color-scheme:light}
-  @media (prefers-color-scheme:dark){:root{--bg:#141a16;--ink:#e7eee8;--muted:#a6b3a9;--rule:#2c362f;--accent:#8abd24;color-scheme:dark}}
+  :root{--bg:#FDFCFB;--card:#fff;--ink:#1a1a1a;--muted:#5f5f5f;--rule:#E8DCC8;--accent:#316049;--on:#fff;color-scheme:light}
+  @media (prefers-color-scheme:dark){:root{--bg:#1a1a1a;--card:#2a2a2a;--ink:#e5e5e5;--muted:#a8a8a8;--rule:#3a3a3a;--accent:#6BAA91;--on:#1a1a1a;color-scheme:dark}}
   *{box-sizing:border-box}
   body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);
-    font:400 17px/1.5 "Source Sans 3","Segoe UI",system-ui,sans-serif;padding:24px max(16px,env(safe-area-inset-left,0px))}
-  form{width:min(100%,380px);display:grid;gap:14px}
-  h1{font:800 1.5rem/1.2 Raleway,"Helvetica Neue",Arial,sans-serif;margin:0}
+    font:400 16.5px/1.6 "Open Sans",ui-sans-serif,system-ui,sans-serif;padding:24px max(16px,env(safe-area-inset-left,0px))}
+  form{width:min(100%,400px);display:grid;gap:14px;background:var(--card);border:1px solid var(--rule);border-radius:24px;padding:28px}
+  .brand{font:700 1rem/1 Raleway,"Helvetica Neue",Arial,sans-serif;color:var(--accent);text-decoration:none}
+  h1{font:800 1.6rem/1.15 Raleway,"Helvetica Neue",Arial,sans-serif;margin:0}
   p{margin:0;color:var(--muted);font-size:.95rem}
   label{font-size:.85rem;color:var(--muted)}
-  input{font:inherit;width:100%;padding:10px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink)}
-  button{font:inherit;font-weight:700;padding:10px 14px;border:0;border-radius:8px;background:var(--accent);color:var(--bg);cursor:pointer}
+  input{font:inherit;width:100%;padding:10px 12px;border:1px solid var(--rule);border-radius:12px;background:var(--bg);color:var(--ink)}
+  button{font:inherit;font-weight:700;padding:10px 14px;border:0;border-radius:12px;background:var(--accent);color:var(--on);cursor:pointer}
   button:disabled{opacity:.6;cursor:progress}
   input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  #err{color:#c0392b;font-size:.9rem;min-height:1.3em}
+  #err{color:#b3261e;font-size:.9rem;min-height:1.3em}
 </style>
 </head>
 <body>
 <form id="f" autocomplete="off">
+  <a class="brand" href="/">Moritz</a>
   <h1>${esc(title)}</h1>
   <p>Diese Seite ist passwortgeschützt.</p>
   <div><label for="pw">Passwort</label><input id="pw" type="password" required autofocus></div>
